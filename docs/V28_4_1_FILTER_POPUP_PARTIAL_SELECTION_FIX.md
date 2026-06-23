@@ -1,4 +1,4 @@
-# Gridly v28.4.1 - Filter Popup Partial Selection Fix
+# ViewGrid v28.4.1 - Filter Popup Partial Selection Fix
 
 - Popup filtre listesindeki tekil seçimlerde `Tümünü seç` artık doğru şekilde `Indeterminate` durumuna geçer.
 - `Apply` işlemi artık `CheckBox.Checked` yerine `CheckState.Checked` kontrol eder.

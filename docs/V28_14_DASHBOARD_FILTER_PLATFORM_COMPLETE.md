@@ -1,4 +1,4 @@
-# Gridly v28.14 - Dashboard Filter + Platform Completion
+# ViewGrid v28.14 - Dashboard Filter + Platform Completion
 
 Bu sürüm v28.13 platform altyapısını daha çalışır hale getiren polish/fix paketidir.
 
@@ -18,7 +18,7 @@ grid.ShowDashboardColumnFilter(btnKolonFiltre);
 grid.ShowDashboardColumnFilterAtScreen(Control.MousePosition);
 grid.ShowDashboardColumnFilterForTypedText(txtSearch.Text, btnKolonFiltre);
 
-grid.DashboardFilterOptions.ColumnSelectionMode = GridlyCardFilterColumnSelectionMode.AskUser;
+grid.DashboardFilterOptions.ColumnSelectionMode = ViewGridCardFilterColumnSelectionMode.AskUser;
 grid.DashboardFilterOptions.ShowColumnChooserBeforeFilter = true;
 grid.DashboardFilterOptions.RememberLastColumn = true;
 ```

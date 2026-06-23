@@ -1,0 +1,144 @@
+using System.ComponentModel;
+using ViewGrid.Theming;
+
+namespace ViewGrid.Core;
+
+public enum ViewGrid51UsageProfile
+{
+    AudixMedia,
+    ThemeAudit,
+    StabilityPilot
+}
+
+public sealed class ViewGrid51UsageCheckResult
+{
+    public string Profile { get; set; } = string.Empty;
+    public string Check { get; set; } = string.Empty;
+    public bool Passed { get; set; }
+    public string Message { get; set; } = string.Empty;
+}
+
+public partial class ViewGridControl
+{
+    [Category("ViewGrid 5.1 - Real Usage")]
+    [DefaultValue(true)]
+    [Description("ViewGrid 5.1 gerçek kullanım pilot profilini etkinleştirir: Audix medya, tema audit ve stabilite kontrolleri.")]
+    public bool EnableViewGrid51RealUsagePilot { get; set; } = true;
+
+    [Category("ViewGrid 5.1 - Real Usage")]
+    [DefaultValue(true)]
+    [Description("Audix/Plex/Spotify tarzı medya görünümlerinde albüm kapağı, playback state, placeholder, kalite rozeti ve video preview ayarlarını birlikte uygular.")]
+    public bool EnableAudix51MediaPilot { get; set; } = true;
+
+    [Category("ViewGrid 5.1 - Real Usage")]
+    [DefaultValue(true)]
+    [Description("Koyu/açık/yüksek kontrast temalarda buton, combo, label, badge, kart ve medya overlay okunurluğunu daha sıkı doğrular.")]
+    public bool EnableTheme51Audit { get; set; } = true;
+
+    public void ApplyViewGrid51RealUsageDefaults()
+    {
+        EnableViewGrid51RealUsagePilot = true;
+        EnableAudix51MediaPilot = true;
+        EnableTheme51Audit = true;
+
+        ApplyViewGrid502HardeningDefaults();
+
+        EnforceThemeAccessibility = true;
+        AutoEnsureReadableTextColors = true;
+        UseUnifiedThemeVisuals = true;
+        ThemeStudioEnforceAccessibility = true;
+        AutoApplyThemeToContextMenus = true;
+        AutoApplyThemeToColumnHeaders = true;
+
+        EnableSearchEverywhere = true;
+        EnableCommandPalette = true;
+        EnableEnterpriseLayout = true;
+        EnableLayoutStudio = true;
+
+        Invalidate();
+    }
+
+    public void ApplyAudix51MediaPilotDefaults()
+    {
+        ApplyAudix502MediaDefaults();
+        EnableViewGrid51RealUsagePilot = true;
+        EnableAudix51MediaPilot = true;
+
+        SetViewMode(ViewGridMode.Poster);
+        TilePosterMode = true;
+        TilePreferredWidth = Math.Max(TilePreferredWidth, 235);
+        TilePreferredHeight = Math.Max(TilePreferredHeight, 318);
+        TilePosterImageHeight = Math.Max(TilePosterImageHeight, 172);
+        PosterPreferredWidth = Math.Max(PosterPreferredWidth, 235);
+        PosterPreferredHeight = Math.Max(PosterPreferredHeight, 318);
+        PosterImageHeight = Math.Max(PosterImageHeight, 184);
+
+        ShowMediaOverlayButton = true;
+        ShowMediaPlaybackState = true;
+        ShowMediaNowPlayingBadge = true;
+        ShowMediaEqualizerIndicator = true;
+        ShowMediaQualityBadge = true;
+        MediaVideoPreviewMode = true;
+        MediaImageRoundedCorners = true;
+        MediaImageScaleMode = ViewGridMediaImageScaleMode.Cover;
+        EnableMediaLazyLoading = true;
+        EnableMediaImageCache = true;
+        MediaMemoryCacheLimit = Math.Max(MediaMemoryCacheLimit, 512);
+
+        ShowQuickFilterBar = true;
+        ShowActiveFilterChips = true;
+        Invalidate();
+    }
+
+    public void ApplyTheme51AuditDefaults(ViewGridThemeStudioPreset preset = ViewGridThemeStudioPreset.AudixDark)
+    {
+        EnableTheme51Audit = true;
+        ApplyV35ThemeStudioPack(preset);
+        EnforceThemeAccessibility = true;
+        AutoEnsureReadableTextColors = true;
+        UseUnifiedThemeVisuals = true;
+        ThemeStudioEnforceAccessibility = true;
+        AutoApplyThemeToColumnHeaders = true;
+        AutoApplyThemeToContextMenus = true;
+        ShowQuickFilterBar = true;
+        ShowActiveFilterChips = true;
+        Invalidate();
+    }
+
+    public IReadOnlyList<ViewGrid51UsageCheckResult> RunViewGrid51UsageChecks()
+    {
+        var result = new List<ViewGrid51UsageCheckResult>();
+
+        result.Add(new ViewGrid51UsageCheckResult
+        {
+            Profile = "Audix",
+            Check = "Media visual state",
+            Passed = ShowMediaPlaybackState && ShowMediaOverlayButton && ShowMediaNowPlayingBadge && EnableMediaImageCache,
+            Message = ShowMediaPlaybackState && ShowMediaOverlayButton && ShowMediaNowPlayingBadge && EnableMediaImageCache
+                ? "Poster/Gallery/MediaTile/FilmStrip için play-pause state, now-playing rozeti ve cache aktif."
+                : "Audix medya kartlarında çalma durumu veya cache görünürlüğü eksik olabilir."
+        });
+
+        result.Add(new ViewGrid51UsageCheckResult
+        {
+            Profile = "Theme",
+            Check = "Readability",
+            Passed = EnforceThemeAccessibility && AutoEnsureReadableTextColors && ThemeStudioEnforceAccessibility,
+            Message = EnforceThemeAccessibility && AutoEnsureReadableTextColors && ThemeStudioEnforceAccessibility
+                ? "Light/Dark/High Contrast okunurluk guard aktif."
+                : "Koyu/açık tema geçişlerinde bazı metinler düşük kontrast kalabilir."
+        });
+
+        result.Add(new ViewGrid51UsageCheckResult
+        {
+            Profile = "Stability",
+            Check = "Hardening defaults",
+            Passed = EnableBuildRuntimeHardening && StrictThemeReadabilityGuard && StrictMediaRuntimeGuard,
+            Message = EnableBuildRuntimeHardening && StrictThemeReadabilityGuard && StrictMediaRuntimeGuard
+                ? "v50.2 hardening varsayılanları korunuyor."
+                : "Hardening guard ayarlarından biri kapalı."
+        });
+
+        return result;
+    }
+}

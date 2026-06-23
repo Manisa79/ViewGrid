@@ -1,6 +1,6 @@
-# Gridly 1.0.52.2 Community Preview
+# ViewGrid 1.0.52.2 Community Preview
 
-Gridly 1.0.52.2 is a source-first Community Preview for WinForms developers.
+ViewGrid 1.0.52.2 is a source-first Community Preview for WinForms developers.
 
 ## Highlights
 
@@ -12,23 +12,23 @@ Gridly 1.0.52.2 is a source-first Community Preview for WinForms developers.
 
 ## Documentation
 
-- `docs/Gridly_Professional_Developer_User_Guide_v1.0.52.2_TR.docx`
-- `docs/Gridly_Professional_Developer_User_Guide_v1.0.52.2_EN.docx`
+- `docs/ViewGrid_Professional_Developer_User_Guide_v1.0.52.2_TR.docx`
+- `docs/ViewGrid_Professional_Developer_User_Guide_v1.0.52.2_EN.docx`
 - `docs/USER_GUIDE_INDEX.md`
-- `docs/Gridly_Full_Image_Audit_v1.0.52.2.md`
+- `docs/ViewGrid_Full_Image_Audit_v1.0.52.2.md`
 
 ## Validation required before public release
 
 This package was prepared in a Linux/headless environment where Windows Forms build execution was not available. Before pushing publicly, run on Windows:
 
 ```powershell
-dotnet restore Gridly.sln
-dotnet build Gridly.sln -c Release
-./tools/QualityChecks/Gridly.QualityChecks.ps1
+dotnet restore ViewGrid.sln
+dotnet build ViewGrid.sln -c Release
+./tools/QualityChecks/ViewGrid.QualityChecks.ps1
 ```
 
 For NuGet packaging:
 
 ```powershell
-dotnet pack src/Gridly/Gridly.csproj -c Release -o artifacts/nuget /p:GridlyRepositoryUrl=https://github.com/<owner>/Gridly
+dotnet pack src/ViewGrid/ViewGrid.csproj -c Release -o artifacts/nuget /p:ViewGridRepositoryUrl=https://github.com/<owner>/ViewGrid
 ```

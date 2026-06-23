@@ -1,10 +1,10 @@
-# Gridly v27.2 User Facing Features
+# ViewGrid v27.2 User Facing Features
 
 v27.0 çekirdekte başlayan State Engine, Range Virtual Provider ve görsel profil altyapısı v27.2 ile kullanıcıya açıldı.
 
 ## Eklenen kullanıcıya dönük parçalar
 
-- `ActiveScenario`: Gridly'nin MasterData, BOM, ticket, timeline, yoğun veri gibi hazır görünüm senaryolarını designer veya runtime menüden seçtirir.
+- `ActiveScenario`: ViewGrid'nin MasterData, BOM, ticket, timeline, yoğun veri gibi hazır görünüm senaryolarını designer veya runtime menüden seçtirir.
 - `ShowStateMenuItems`: Başlık/gövde sağ tık menüsüne State / Preset menüsünü ekler.
 - `ShowScenarioMenuItems`: Başlık/gövde sağ tık menüsüne Görünüm Senaryosu menüsünü ekler.
 - `AutoStateFilePath`: Varsayılan state dosya yolu.
@@ -17,7 +17,7 @@ v27.0 çekirdekte başlayan State Engine, Range Virtual Provider ve görsel prof
 ## MasterData için önerilen başlangıç
 
 ```csharp
-grid.ActiveScenario = GridlyViewScenario.BomPositions;
+grid.ActiveScenario = ViewGridScenario.BomPositions;
 grid.StateKeyAspectName = "MaterialCode";
 grid.ShowStateMenuItems = true;
 grid.ShowScenarioMenuItems = true;
@@ -30,7 +30,7 @@ grid.ApplyActiveScenario();
 ## AOI Support Desk için önerilen başlangıç
 
 ```csharp
-ticketGrid.ActiveScenario = GridlyViewScenario.TicketBoard;
+ticketGrid.ActiveScenario = ViewGridScenario.TicketBoard;
 ticketGrid.StateKeyAspectName = "Id";
 ticketGrid.ShowStateMenuItems = true;
 ticketGrid.ShowScenarioMenuItems = true;
@@ -39,7 +39,7 @@ ticketGrid.ApplyActiveScenario();
 
 ## Not
 
-Bu sürümde özellikler runtime ve designer tarafına bağlandı. Kanban / Timeline / MasterDetail gibi modların özel çizim motoru halen mevcut Gridly render altyapısı üzerinden güvenli şekilde çalışır; ilerleyen sürümde ayrı layout motoruna ayrılabilir.
+Bu sürümde özellikler runtime ve designer tarafına bağlandı. Kanban / Timeline / MasterDetail gibi modların özel çizim motoru halen mevcut ViewGrid render altyapısı üzerinden güvenli şekilde çalışır; ilerleyen sürümde ayrı layout motoruna ayrılabilir.
 
 ## Tek satır başlangıç yardımcıları
 

@@ -1,6 +1,6 @@
-# Gridly v30.0 Visual Experience Suite
+# ViewGrid v30.0 Visual Experience Suite
 
-Bu sürüm Gridly'yi klasik tablo kontrolü çizgisinden çıkarıp medya, katalog, dashboard ve üretim ekranları için çok amaçlı görsel veri deneyimi kontrolüne taşır.
+Bu sürüm ViewGrid'yi klasik tablo kontrolü çizgisinden çıkarıp medya, katalog, dashboard ve üretim ekranları için çok amaçlı görsel veri deneyimi kontrolüne taşır.
 
 ## Yeni / güçlendirilen görünüm tipleri
 
@@ -26,18 +26,18 @@ Bu sürüm Gridly'yi klasik tablo kontrolü çizgisinden çıkarıp medya, katal
 ## Kullanım örnekleri
 
 ```csharp
-gridly.Columns.Add(new GridlyColumn("Kapak", "Cover", 120)
+viewgrid.Columns.Add(new ViewGridColumn("Kapak", "Cover", 120)
 {
-    Kind = GridlyColumnKind.Image,
+    Kind = ViewGridColumnKind.Image,
     ImageGetter = row => ((MediaRow)row).CoverImage
 });
 
-gridly.Columns.Add(new GridlyColumn("Başlık", "Title", 220) { Editable = true });
-gridly.Columns.Add(new GridlyColumn("Açıklama", "Description", 260));
+viewgrid.Columns.Add(new ViewGridColumn("Başlık", "Title", 220) { Editable = true });
+viewgrid.Columns.Add(new ViewGridColumn("Açıklama", "Description", 260));
 
-gridly.TilePosterMode = true;
-gridly.MediaImageScaleMode = GridlyMediaImageScaleMode.Cover;
-gridly.SetViewMode(GridlyViewMode.Gallery);
+viewgrid.TilePosterMode = true;
+viewgrid.MediaImageScaleMode = ViewGridMediaImageScaleMode.Cover;
+viewgrid.SetViewMode(ViewGridMode.Gallery);
 ```
 
 ## Önerilen proje eşleşmeleri

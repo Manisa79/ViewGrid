@@ -1,0 +1,32 @@
+name: ViewGrid CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET 10 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Restore
+        run: dotnet restore ViewGrid.sln
+      - name: Build
+        run: dotnet build ViewGrid.sln -c Release --no-restore /p:CI=true
+      - name: Quality checks
+        shell: pwsh
+        run: ./tools/QualityChecks/ViewGrid.QualityChecks.ps1
+      - name: Pack
+        run: dotnet pack src/ViewGrid/ViewGrid.csproj -c Release --no-build -o artifacts/nuget
+      - name: Upload NuGet artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: viewgrid-nuget
+          path: artifacts/nuget/*.nupkg

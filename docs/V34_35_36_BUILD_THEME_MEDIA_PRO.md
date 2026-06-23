@@ -1,10 +1,10 @@
-# Gridly v34 + v35 + v36 Faz Paketi
+# ViewGrid v34 + v35 + v36 Faz Paketi
 
 Bu paket v33 Theme Accessibility Engine üzerine üç fazı birlikte ekler.
 
 ## Faz 34 — Stability & Build Quality
 
-Amaç: Gridly çekirdeğinde yeni fazlar büyüdükçe API çakışmalarını, riskli ayarları ve örnek merkezi karmaşasını daha kolay kontrol etmek.
+Amaç: ViewGrid çekirdeğinde yeni fazlar büyüdükçe API çakışmalarını, riskli ayarları ve örnek merkezi karmaşasını daha kolay kontrol etmek.
 
 Eklenenler:
 
@@ -14,8 +14,8 @@ Eklenenler:
 - `ApplyV34BuildQualityPack()`
 - `RunBuildQualityDiagnostics()`
 - `RunBuildQualityDiagnosticsText()`
-- `GridlyQualityReport`
-- `GridlyQualityCheckItem`
+- `ViewGridQualityReport`
+- `ViewGridQualityCheckItem`
 
 Kontrol ettiği alanlar:
 
@@ -39,8 +39,8 @@ Eklenenler:
 - `ApplyV35ThemeStudioPack(...)`
 - `GetThemeStudioPalettes()`
 - `ExportCurrentThemeStudioPalette(...)`
-- `GridlyThemeStudio`
-- `GridlyThemeStudioPreset`
+- `ViewGridThemeStudio`
+- `ViewGridThemeStudioPreset`
 
 Hazır presetler:
 
@@ -74,14 +74,14 @@ Eklenenler:
 Audix önerilen kullanım:
 
 ```csharp
-gridly.ApplyV36MediaProPack();
-gridly.SetViewMode(GridlyViewMode.Poster);
-gridly.MediaQualityBadgeAspectName = "Format";
-gridly.MediaImagePathGetter = row => ((TrackItem)row).CoverPath;
+viewgrid.ApplyV36MediaProPack();
+viewgrid.SetViewMode(ViewGridMode.Poster);
+viewgrid.MediaQualityBadgeAspectName = "Format";
+viewgrid.MediaImagePathGetter = row => ((TrackItem)row).CoverPath;
 
-var coverColumn = new GridlyColumn("Kapak", "Title");
-coverColumn.ImageGetter = row => gridly.ResolveMediaImagePro(row);
-gridly.Columns.Add(coverColumn);
+var coverColumn = new ViewGridColumn("Kapak", "Title");
+coverColumn.ImageGetter = row => viewgrid.ResolveMediaImagePro(row);
+viewgrid.Columns.Add(coverColumn);
 ```
 
 ## Example Center

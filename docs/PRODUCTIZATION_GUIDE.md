@@ -1,4 +1,4 @@
-# Gridly Productization Guide
+# ViewGrid Productization Guide
 
 ## Release hedefleri
 

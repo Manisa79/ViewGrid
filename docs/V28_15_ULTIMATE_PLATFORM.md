@@ -1,6 +1,6 @@
-# Gridly v28.15 Ultimate Platform
+# ViewGrid v28.15 Ultimate Platform
 
-Bu sürüm Gridly'yi sadece liste/kart kontrolü değil, genişletilebilir bir WinForms veri platformu haline getiren üst seviye altyapıları ekler.
+Bu sürüm ViewGrid'yi sadece liste/kart kontrolü değil, genişletilebilir bir WinForms veri platformu haline getiren üst seviye altyapıları ekler.
 
 ## Eklenenler
 
@@ -24,14 +24,14 @@ object? label = grid.EvaluateExpression(row, "IF(Status='Error','Kritik','Normal
 
 grid.CaptureChangeSnapshot();
 // data değişti...
-IReadOnlyList<GridlyRowChangeSet> changes = grid.DetectChanges();
+IReadOnlyList<ViewGridRowChangeSet> changes = grid.DetectChanges();
 
 grid.ExportLayoutPackage("operator.layout", "Operator");
 grid.ImportLayoutPackage("operator.layout");
 
-IReadOnlyList<GridlyDataColumnProfile> profile = grid.GetDataProfile();
+IReadOnlyList<ViewGridDataColumnProfile> profile = grid.GetDataProfile();
 ```
 
 ## Not
 
-Bu katmanlar genel Gridly API'sidir; AOI Support Desk'e özel değildir. Stok, üretim, sipariş, dosya, log, destek ticket, dashboard ve yönetim ekranlarında aynı altyapı kullanılabilir.
+Bu katmanlar genel ViewGrid API'sidir; AOI Support Desk'e özel değildir. Stok, üretim, sipariş, dosya, log, destek ticket, dashboard ve yönetim ekranlarında aynı altyapı kullanılabilir.

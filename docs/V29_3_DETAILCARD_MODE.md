@@ -1,6 +1,6 @@
 # V29.3 DetailCard Mode
 
-Gridly v29.3 ile `GridlyViewMode.DetailCard` eklendi.
+ViewGrid v29.3 ile `ViewGridMode.DetailCard` eklendi.
 
 ## Amaç
 
@@ -17,13 +17,13 @@ Bu görünüm özellikle şu ekranlar için uygundur:
 ## Kullanım
 
 ```csharp
-glvPanel.SetViewMode(GridlyViewMode.DetailCard);
+glvPanel.SetViewMode(ViewGridMode.DetailCard);
 ```
 
 veya:
 
 ```csharp
-glvPanel.ViewMode = GridlyViewMode.DetailCard;
+glvPanel.ViewMode = ViewGridMode.DetailCard;
 ```
 
 ## Davranış

@@ -1,11 +1,11 @@
 name: Bug report
-description: Report a Gridly bug
+description: Report a ViewGrid bug
 labels: [bug]
 body:
   - type: input
     id: version
     attributes:
-      label: Gridly version
+      label: ViewGrid version
       placeholder: 1.0.52.2
   - type: dropdown
     id: viewmode

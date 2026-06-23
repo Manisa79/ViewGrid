@@ -1,4 +1,4 @@
-# Gridly v27.8 - Card Layout + Tree UX
+# ViewGrid v27.8 - Card Layout + Tree UX
 
 ## Card / Poster filter layout fix
 
@@ -19,16 +19,16 @@ Davranış:
 - Scroll görünür satır hesabı filtre alanını düşer; üstte yarım kart kalmaz.
 - İstenirse eski overlay davranışı için `CardViewReserveFilterArea = false` yapılabilir.
 
-## TreeGridlyView UX Pack
+## TreeViewGridControl UX Pack
 
-TreeGridlyView için üretim/MasterData kullanımına uygun hızlı ağaç işlemleri eklendi.
+TreeViewGridControl için üretim/MasterData kullanımına uygun hızlı ağaç işlemleri eklendi.
 
 Yeni ayarlar ve API:
 
 ```csharp
 treeGrid.EnableTreeContextMenu = true;
 treeGrid.TreeDoubleClickTogglesNode = true;
-treeGrid.TreeSearchBehavior = TreeGridlySearchBehavior.ExpandAncestorsAndDescendants;
+treeGrid.TreeSearchBehavior = TreeViewGridSearchBehavior.ExpandAncestorsAndDescendants;
 treeGrid.TreeDefaultExpandLevel = 2;
 
 treeGrid.ApplyTreeSearch("R12");

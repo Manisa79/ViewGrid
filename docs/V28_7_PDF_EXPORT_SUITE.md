@@ -1,6 +1,6 @@
-# Gridly v28.7 - PDF Export Suite
+# ViewGrid v28.7 - PDF Export Suite
 
-Bu sürüm Gridly export altyapısına gerçek PDF çıktısı ekler.
+Bu sürüm ViewGrid export altyapısına gerçek PDF çıktısı ekler.
 
 ## Eklenenler
 
@@ -20,11 +20,11 @@ Bu sürüm Gridly export altyapısına gerçek PDF çıktısı ekler.
 ## Kullanım
 
 ```csharp
-grid.ExportVisiblePdf(@"C:\Temp\tickets.pdf", new GridlyPdfExportOptions
+grid.ExportVisiblePdf(@"C:\Temp\tickets.pdf", new ViewGridPdfExportOptions
 {
     Title = "AOI Support Desk Tickets",
-    Mode = GridlyPdfExportMode.Table,
-    Orientation = GridlyPdfPageOrientation.Landscape,
+    Mode = ViewGridPdfExportMode.Table,
+    Orientation = ViewGridPdfPageOrientation.Landscape,
     FitToPageWidth = true,
     ShowGridLines = true,
     ZebraRows = true
@@ -34,17 +34,17 @@ grid.ExportVisiblePdf(@"C:\Temp\tickets.pdf", new GridlyPdfExportOptions
 Card/Dashboard çıktısı:
 
 ```csharp
-grid.ExportVisiblePdf(@"C:\Temp\dashboard.pdf", new GridlyPdfExportOptions
+grid.ExportVisiblePdf(@"C:\Temp\dashboard.pdf", new ViewGridPdfExportOptions
 {
     Title = "Dashboard",
-    Mode = GridlyPdfExportMode.Card,
+    Mode = ViewGridPdfExportMode.Card,
     CardColumns = 2,
     CardMinHeight = 105,
-    CardVisualInfoResolver = row => new GridlyCardVisualInfo
+    CardVisualInfoResolver = row => new ViewGridCardVisualInfo
     {
         AccentColor = Color.DodgerBlue,
         DotColor = Color.DodgerBlue,
-        Badges = { new GridlyCardBadge { Text = "SAP", BackColor = Color.SeaGreen } }
+        Badges = { new ViewGridCardBadge { Text = "SAP", BackColor = Color.SeaGreen } }
     }
 });
 ```

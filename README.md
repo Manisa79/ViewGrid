@@ -6,7 +6,7 @@
 
 ViewGrid is still in Community Preview. The API is usable, but feedback from real projects may still shape naming, defaults and module boundaries.
 
-> Note: In this preview, some internal project, namespace, file and class names still use the original `Gridly` / `GridlyView` naming for compatibility. These names may be gradually migrated in a future release.
+> Note: In this preview, some internal project, namespace, file and class names still use the original `ViewGrid` / `ViewGridControl` naming for compatibility. These names may be gradually migrated in a future release.
 
 ## Highlights
 
@@ -26,9 +26,9 @@ ViewGrid is still in Community Preview. The API is usable, but feedback from rea
 ```text
 ViewGrid/
 ├─ src/
-│  └─ Gridly/                 # Core DLL, legacy internal project name
+│  └─ ViewGrid/                 # Core DLL, legacy internal project name
 ├─ samples/
-│  └─ Gridly.TestApp/         # Showcase, examples and developer center
+│  └─ ViewGrid.TestApp/         # Showcase, examples and developer center
 ├─ docs/                      # API notes, migration docs and feature history
 ├─ release/                   # Release notes
 ├─ assets/                    # Logo/assets
@@ -38,16 +38,16 @@ Getting started
 
 Current preview API:
 
-using Gridly.Core;
+using ViewGrid.Core;
 
-var viewGrid = new GridlyView();
+var viewGrid = new ViewGridControl();
 viewGrid.Dock = DockStyle.Fill;
-viewGrid.ViewMode = GridlyViewMode.Details;
+viewGrid.ViewMode = ViewGridMode.Details;
 viewGrid.SetObjects(items);
 Controls.Add(viewGrid);
 Media view example
 viewGrid.ApplyAudix51MediaPilotDefaults();
-viewGrid.ViewMode = GridlyViewMode.Poster;
+viewGrid.ViewMode = ViewGridMode.Poster;
 viewGrid.SetObjects(trackList);
 
 A media item can expose fields such as title, artist, album, duration and cover image. The TestApp includes Poster, Gallery, MediaTile, FilmStrip and playback-state examples.
@@ -56,7 +56,7 @@ Localization
 
 TestApp includes a startup language selection screen. Host apps can apply localization globally:
 
-GridlyLocalization.Use("tr-TR");
+ViewGridLocalization.Use("tr-TR");
 Documentation
 
 The full user/developer guide is available in both languages:
@@ -70,8 +70,8 @@ Publish readiness report
 These documents use inline screenshots that were reviewed against their target headings.
 
 Build
-dotnet restore Gridly.sln
-dotnet build Gridly.sln -c Release
+dotnet restore ViewGrid.sln
+dotnet build ViewGrid.sln -c Release
 
 Requirements:
 
@@ -80,7 +80,7 @@ Windows
 Visual Studio 2022 or newer recommended
 Samples
 
-All samples live in samples/Gridly.TestApp. The core DLL intentionally does not contain Example Center or Developer Center forms.
+All samples live in samples/ViewGrid.TestApp. The core DLL intentionally does not contain Example Center or Developer Center forms.
 
 Run the TestApp to explore:
 
@@ -106,7 +106,7 @@ MIT License. See LICENSE.
 
 Documentation Capture Mode
 
-ViewGrid v1.0.52.2 includes a documentation screenshot workflow inside samples/Gridly.TestApp.
+ViewGrid v1.0.52.2 includes a documentation screenshot workflow inside samples/ViewGrid.TestApp.
 
 Open:
 
@@ -115,23 +115,23 @@ Documentation / Documentation Capture Mode
 Then select the Example Center screens to capture. The tool generates:
 
 docs/screenshots/*.png
-docs/screenshots/gridly-screenshot-manifest.json
-docs/screenshots/gridly-screenshots.md
-docs/screenshots/gridly-docx-insert-map.json
+docs/screenshots/viewgrid-screenshot-manifest.json
+docs/screenshots/viewgrid-screenshots.md
+docs/screenshots/viewgrid-docx-insert-map.json
 
 To append generated screenshots into the Word guide:
 
 python tools/docs/insert_screenshots_into_docx.py \
-  --docx docs/Gridly_Professional_Developer_User_Guide.docx \
+  --docx docs/ViewGrid_Professional_Developer_User_Guide.docx \
   --screenshots docs/screenshots \
-  --output docs/Gridly_Professional_Developer_User_Guide_with_Screenshots.docx
+  --output docs/ViewGrid_Professional_Developer_User_Guide_with_Screenshots.docx
 GitHub publish readiness
 
 This repository is prepared as a source-first Community Preview package:
 
 generated Visual Studio and build outputs are excluded from the release source package,
-the core library currently remains under src/Gridly,
-showcase and developer examples currently remain under samples/Gridly.TestApp,
+the core library currently remains under src/ViewGrid,
+showcase and developer examples currently remain under samples/ViewGrid.TestApp,
 release metadata is aligned to 1.0.52.2,
 CI builds on Windows because WinForms requires Windows targeting.
 
@@ -139,16 +139,16 @@ Before creating a public GitHub release, run the local release checklist in RELE
 
 For NuGet packaging, pass your final repository URL as an MSBuild property:
 
-dotnet pack src/Gridly/Gridly.csproj -c Release -o artifacts/nuget /p:GridlyRepositoryUrl=https://github.com/Manisa79/ViewGrid
+dotnet pack src/ViewGrid/ViewGrid.csproj -c Release -o artifacts/nuget /p:ViewGridRepositoryUrl=https://github.com/Manisa79/ViewGrid
 Naming roadmap
 
 The public repository and product name are now ViewGrid.
 
 For compatibility, this preview still exposes the original API names such as:
 
-GridlyView
-GridlyViewMode
-GridlyLocalization
-Gridly.Core
+ViewGridControl
+ViewGridMode
+ViewGridLocalization
+ViewGrid.Core
 
 A future release may introduce ViewGrid-native API names while keeping compatibility aliases for existing preview users.

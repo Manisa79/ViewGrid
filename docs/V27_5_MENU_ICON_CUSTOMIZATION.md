@@ -1,6 +1,6 @@
-# Gridly v27.5 - Menu & Icon Customization
+# ViewGrid v27.5 - Menu & Icon Customization
 
-Bu sürüm Gridly menülerini host projeye göre tamamen yönetilebilir hale getirir.
+Bu sürüm ViewGrid menülerini host projeye göre tamamen yönetilebilir hale getirir.
 
 ## Eklenenler
 
@@ -20,10 +20,10 @@ Bu sürüm Gridly menülerini host projeye göre tamamen yönetilebilir hale get
 ## Örnek
 
 ```csharp
-grid.MenuOptions.HeaderGroups = GridlyMenuGroups.Filter | GridlyMenuGroups.Sort | GridlyMenuGroups.ColumnChooser;
-grid.MenuOptions.BodyGroups = GridlyMenuGroups.Clipboard | GridlyMenuGroups.ViewMode;
-grid.SetMenuItemVisible(GridlyMenuItemKeys.AdvancedFilter, false);
-grid.SetCustomMenuIconFolder(@"C:\MyApp\GridlyIcons");
+grid.MenuOptions.HeaderGroups = ViewGridMenuGroups.Filter | ViewGridMenuGroups.Sort | ViewGridMenuGroups.ColumnChooser;
+grid.MenuOptions.BodyGroups = ViewGridMenuGroups.Clipboard | ViewGridMenuGroups.ViewMode;
+grid.SetMenuItemVisible(ViewGridMenuItemKeys.AdvancedFilter, false);
+grid.SetCustomMenuIconFolder(@"C:\MyApp\ViewGridIcons");
 ```
 
 ## İkon key isimleri

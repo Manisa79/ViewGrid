@@ -1,12 +1,12 @@
-# Contributing to Gridly
+# Contributing to ViewGrid
 
-Thanks for trying Gridly. This repository is published as a Community Preview, so bug reports, screenshots and real-world usage feedback are very valuable.
+Thanks for trying ViewGrid. This repository is published as a Community Preview, so bug reports, screenshots and real-world usage feedback are very valuable.
 
 ## Before opening an issue
 
 Please include:
 
-- Gridly version
+- ViewGrid version
 - .NET SDK / Visual Studio version
 - Windows version
 - Theme mode: Light, Dark, System or High Contrast
@@ -16,12 +16,12 @@ Please include:
 ## Local build
 
 ```bash
-dotnet restore Gridly.sln
-dotnet build Gridly.sln -c Release
+dotnet restore ViewGrid.sln
+dotnet build ViewGrid.sln -c Release
 ```
 
-The core library lives under `src/Gridly`. All demo and showcase screens must stay under `samples/Gridly.TestApp`.
+The core library lives under `src/ViewGrid`. All demo and showcase screens must stay under `samples/ViewGrid.TestApp`.
 
 ## Pull request rule
 
-Please do not add sample/demo forms to `src/Gridly`. The DLL should stay clean and product-ready. Put all experiments under `samples/Gridly.TestApp`.
+Please do not add sample/demo forms to `src/ViewGrid`. The DLL should stay clean and product-ready. Put all experiments under `samples/ViewGrid.TestApp`.

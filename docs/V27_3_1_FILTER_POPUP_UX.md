@@ -1,4 +1,4 @@
-# Gridly v27.3.1 Filter Popup UX Fix
+# ViewGrid v27.3.1 Filter Popup UX Fix
 
 Bu ara sürüm uzun filtre değerleri için popup kullanımını iyileştirir.
 

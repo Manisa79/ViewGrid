@@ -1,6 +1,6 @@
-# Gridly v27.9 - Popular Enterprise Features
+# ViewGrid v27.9 - Popular Enterprise Features
 
-Bu ara sürüm, popüler WinForms grid bileşenlerinde sık kullanılan özellikleri Gridly tarafında tek preset altında toplar.
+Bu ara sürüm, popüler WinForms grid bileşenlerinde sık kullanılan özellikleri ViewGrid tarafında tek preset altında toplar.
 
 ## Eklenen ana paket
 

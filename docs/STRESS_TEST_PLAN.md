@@ -1,4 +1,4 @@
-# Gridly Stress Test Plan
+# ViewGrid Stress Test Plan
 
 ## Senaryolar
 
@@ -17,4 +17,4 @@
 
 ## 1 trilyon satır gerçeği
 
-1 trilyon kayıt ancak server-side paging, virtual provider ve index tabanlı veri modeliyle simüle edilir. Gridly tarafında hedef, bu sayıyı belleğe almak değil; görünen aralığı hızlı istemek ve çizmek olmalıdır.
+1 trilyon kayıt ancak server-side paging, virtual provider ve index tabanlı veri modeliyle simüle edilir. ViewGrid tarafında hedef, bu sayıyı belleğe almak değil; görünen aralığı hızlı istemek ve çizmek olmalıdır.

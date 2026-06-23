@@ -1,11 +1,11 @@
-# Gridly v1.0.51.7 - Documentation Capture UI Polish
+# ViewGrid v1.0.51.7 - Documentation Capture UI Polish
 
 Bu ara sürüm, TestApp içindeki Documentation Capture Mode ekranının koyu/açık tema okunabilirliğini ve kullanım anlaşılabilirliğini düzeltir.
 
 ## Düzeltilenler
 
 - Koyu temada buton yazılarının soluk veya okunmaz görünmesi düzeltildi.
-- Butonlar Gridly tema paletine göre özel boyanır hale getirildi.
+- Butonlar ViewGrid tema paletine göre özel boyanır hale getirildi.
 - Birincil aksiyon olan **Ekranları Üret** butonu accent renk ile ayrıştırıldı.
 - Çıktı klasörü satırına açıklama metni eklendi.
 - Seçim butonları büyütüldü ve metinleri daha açıklayıcı hale getirildi.

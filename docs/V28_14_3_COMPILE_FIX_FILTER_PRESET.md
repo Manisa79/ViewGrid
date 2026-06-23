@@ -1,8 +1,8 @@
-# Gridly v28.14.3 - Filter Preset Compile Fix
+# ViewGrid v28.14.3 - Filter Preset Compile Fix
 
 ## Düzeltilen hata
 
-- `GridlyView` içinde aynı imzaya sahip iki ayrı `LoadFilterPreset(string)` metodu bulunuyordu.
+- `ViewGridControl` içinde aynı imzaya sahip iki ayrı `LoadFilterPreset(string)` metodu bulunuyordu.
 - v27.4 dosya tabanlı preset sistemi ile v28.13 platform preset sistemi tek public API altında birleştirildi.
 
 ## Yeni davranış

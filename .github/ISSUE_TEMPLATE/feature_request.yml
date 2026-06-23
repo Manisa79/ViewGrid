@@ -1,12 +1,12 @@
 name: Feature request
-description: Suggest an improvement for Gridly
+description: Suggest an improvement for ViewGrid
 labels: [enhancement]
 body:
   - type: textarea
     id: problem
     attributes:
       label: Problem / scenario
-      description: What are you trying to build with Gridly?
+      description: What are you trying to build with ViewGrid?
     validations:
       required: true
   - type: textarea

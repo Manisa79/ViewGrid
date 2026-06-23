@@ -1,12 +1,12 @@
 # Core / Examples Separation Report
 
-Goal: keep `Gridly.dll` clean for product projects and move showcase/developer screens to `samples/Gridly.TestApp`.
+Goal: keep `ViewGrid.dll` clean for product projects and move showcase/developer screens to `samples/ViewGrid.TestApp`.
 
 ## Current layout
 
-- Core library: `src/Gridly`
-- Sample application: `samples/Gridly.TestApp`
-- Feature snippets and examples: `samples/Gridly.TestApp/Snippets`
+- Core library: `src/ViewGrid`
+- Sample application: `samples/ViewGrid.TestApp`
+- Feature snippets and examples: `samples/ViewGrid.TestApp/Snippets`
 - Documentation: `docs`
 
 ## Core policy
@@ -19,8 +19,8 @@ The core project must not contain:
 - Demo-only datasets
 - Sample forms
 
-All such files belong under `samples/Gridly.TestApp`.
+All such files belong under `samples/ViewGrid.TestApp`.
 
 ## Static check performed
 
-No `ExampleCenter`, `SampleForm`, `TestApp` or `FeatureSamples` references were found under `src/Gridly` during package preparation.
+No `ExampleCenter`, `SampleForm`, `TestApp` or `FeatureSamples` references were found under `src/ViewGrid` during package preparation.

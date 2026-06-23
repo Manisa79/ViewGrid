@@ -1,6 +1,6 @@
-# Gridly v50.2 - Build & Runtime Hardening
+# ViewGrid v50.2 - Build & Runtime Hardening
 
-Bu sürüm yeni görsel mod eklemek yerine Gridly 5.0 özelliklerini projelerde daha güvenli kullanmaya odaklanır.
+Bu sürüm yeni görsel mod eklemek yerine ViewGrid 5.0 özelliklerini projelerde daha güvenli kullanmaya odaklanır.
 
 ## Ana hedef
 
@@ -12,15 +12,15 @@ Bu sürüm yeni görsel mod eklemek yerine Gridly 5.0 özelliklerini projelerde 
 ## Yeni API
 
 ```csharp
-gridly.ApplyGridly502HardeningDefaults();
-var checks = gridly.RunGridly502RuntimeHardeningChecks();
+viewgrid.ApplyViewGrid502HardeningDefaults();
+var checks = viewgrid.RunViewGrid502RuntimeHardeningChecks();
 ```
 
 Audix için:
 
 ```csharp
-gridly.ApplyAudix502MediaDefaults();
-gridly.SetViewMode(GridlyViewMode.Poster);
+viewgrid.ApplyAudix502MediaDefaults();
+viewgrid.SetViewMode(ViewGridMode.Poster);
 ```
 
 ## Runtime check alanları
@@ -35,9 +35,9 @@ gridly.SetViewMode(GridlyViewMode.Poster);
 
 Yeni örnek:
 
-- `GridlyV502HardeningSampleForm`
-- Example Center hızlı erişim: `Gridly v50.2 Hardening`
+- `ViewGridV502HardeningSampleForm`
+- Example Center hızlı erişim: `ViewGrid v50.2 Hardening`
 
 ## Build notu
 
-Bu paket, `tools/gridly_api_guard.py` statik kontrol akışını destekler. Gerçek C# derleme için Windows/.NET SDK ortamında `build/build-gridly.cmd` veya `build/Build-Gridly.ps1` çalıştırılmalıdır.
+Bu paket, `tools/viewgrid_api_guard.py` statik kontrol akışını destekler. Gerçek C# derleme için Windows/.NET SDK ortamında `build/build-viewgrid.cmd` veya `build/Build-ViewGrid.ps1` çalıştırılmalıdır.

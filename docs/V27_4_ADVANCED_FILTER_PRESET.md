@@ -1,6 +1,6 @@
-# Gridly v27.4 - Advanced Filter & Preset Engine
+# ViewGrid v27.4 - Advanced Filter & Preset Engine
 
-Bu sürüm Gridly filtre sistemini sadece tek kolon popup filtresi olmaktan çıkarıp kullanıcı tarafında yönetilebilir bir filtre motoruna taşır.
+Bu sürüm ViewGrid filtre sistemini sadece tek kolon popup filtresi olmaktan çıkarıp kullanıcı tarafında yönetilebilir bir filtre motoruna taşır.
 
 ## Eklenenler
 
@@ -23,7 +23,7 @@ grid.ShowAdvancedFilterBuilder();
 grid.SaveCurrentFilterPreset("MasterData Eksik BOM");
 grid.LoadFilterPreset("MasterData Eksik BOM");
 grid.ApplyBuiltInFilterPreset("Eksik BOM");
-grid.AdvancedFilterLogic = GridlyFilterLogic.Or;
+grid.AdvancedFilterLogic = ViewGridFilterLogic.Or;
 ```
 
 ## Önerilen kullanım

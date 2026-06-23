@@ -1,4 +1,4 @@
-# Gridly v27.7 - Card / Large View Filter UX
+# ViewGrid v27.7 - Card / Large View Filter UX
 
 Büyük kart, dashboard, kanban, poster ve geniş kart görünümlerinde filtreye header olmadan kolay erişim sağlar.
 
@@ -17,11 +17,11 @@ Büyük kart, dashboard, kanban, poster ve geniş kart görünümlerinde filtrey
 ## Önerilen kullanım
 
 ```csharp
-grid.SetViewMode(GridlyViewMode.DashboardCard);
+grid.SetViewMode(ViewGridMode.DashboardCard);
 grid.ShowQuickFilterBar = true;
 grid.ShowFloatingFilterButton = true;
 grid.ShowActiveFilterChips = true;
-grid.FilterMenuMode = GridlyFilterMenuMode.Both;
+grid.FilterMenuMode = ViewGridFilterMenuMode.Both;
 ```
 
 Bu yapı AOI Support Desk ticket kartları, MasterData BOM/program kartları ve makine/hat seçim ekranlarında filtreye tek tık erişim sağlar.

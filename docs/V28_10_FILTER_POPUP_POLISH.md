@@ -1,4 +1,4 @@
-# Gridly v28.10 - Filter Popup Resize, Icons and Active Command Polish
+# ViewGrid v28.10 - Filter Popup Resize, Icons and Active Command Polish
 
 Bu sürüm filtre popup menüsünü daha kullanışlı ve görsel olarak daha okunur hale getirir.
 
@@ -30,4 +30,4 @@ grid.FilterPopupRememberSize = true;
 
 ## Not
 
-Bu özellikler sadece AOI Support Desk için değil, Gridly kullanan tüm projelerde geçerli genel filtre popup deneyimi olarak tasarlandı.
+Bu özellikler sadece AOI Support Desk için değil, ViewGrid kullanan tüm projelerde geçerli genel filtre popup deneyimi olarak tasarlandı.

@@ -1,20 +1,20 @@
-# Gridly v1.0.51.3 - TestApp Language Selector
+# ViewGrid v1.0.51.3 - TestApp Language Selector
 
 ## Amaç
 
-GitHub / Community Preview öncesinde `Gridly.TestApp` başlangıcına dil seçimi eklendi.
-Bu seçim Gridly'nin dahili menüleri, filtre pencereleri, kolon seçici, layout menüleri ve built-in dialog metinleri için tek merkezden uygulanır.
+GitHub / Community Preview öncesinde `ViewGrid.TestApp` başlangıcına dil seçimi eklendi.
+Bu seçim ViewGrid'nin dahili menüleri, filtre pencereleri, kolon seçici, layout menüleri ve built-in dialog metinleri için tek merkezden uygulanır.
 
 ## Eklenenler
 
-- `Gridly.Localization.GridlyLocalization` facade sınıfı
-- `GridlyLocalization.SupportedLanguages`
-- `GridlyLocalization.Use(GridlyLanguage language)`
-- `GridlyLocalization.DisplayName(...)`
-- `GridlyLocalization.FromName(...)`
-- `samples/Gridly.TestApp/StartupLanguageForm`
+- `ViewGrid.Localization.ViewGridLocalization` facade sınıfı
+- `ViewGridLocalization.SupportedLanguages`
+- `ViewGridLocalization.Use(ViewGridLanguage language)`
+- `ViewGridLocalization.DisplayName(...)`
+- `ViewGridLocalization.FromName(...)`
+- `samples/ViewGrid.TestApp/StartupLanguageForm`
 - TestApp başlangıcında dil seçim ekranı
-- Dil seçiminin `settings/gridly-testapp-language.json` içinde saklanması
+- Dil seçiminin `settings/viewgrid-testapp-language.json` içinde saklanması
 
 ## Desteklenen diller
 
@@ -33,22 +33,22 @@ Bu seçim Gridly'nin dahili menüleri, filtre pencereleri, kolon seçici, layout
 ## Uygulamalarda kullanım
 
 ```csharp
-using Gridly.Localization;
+using ViewGrid.Localization;
 
-GridlyLocalization.Use(GridlyLanguage.Turkish);
+ViewGridLocalization.Use(ViewGridLanguage.Turkish);
 ```
 
-veya tek bir GridlyView üzerinden:
+veya tek bir ViewGridControl üzerinden:
 
 ```csharp
-gridly.Language = GridlyLanguage.English;
+viewgrid.Language = ViewGridLanguage.English;
 ```
 
-Not: `GridlyView.Language` mevcut API ile uyumlu kalması için korunmuştur. Arka planda global Gridly localization dilini değiştirir.
+Not: `ViewGridControl.Language` mevcut API ile uyumlu kalması için korunmuştur. Arka planda global ViewGrid localization dilini değiştirir.
 
 ## Kapsam
 
-Bu seçim Gridly çekirdeğinin kendi ürettiği metinleri etkiler:
+Bu seçim ViewGrid çekirdeğinin kendi ürettiği metinleri etkiler:
 
 - Sağ tık / header menüleri
 - Filtre penceresi metinleri
@@ -56,4 +56,4 @@ Bu seçim Gridly çekirdeğinin kendi ürettiği metinleri etkiler:
 - Layout ve grouping menü metinleri
 - Built-in dialog metinleri
 
-Uygulamanın kendi menüleri ve özel formları için aynı dili kullanmak istenirse uygulama tarafında `GridlyLocalization.T("Key")` veya kendi resource sistemi kullanılmalıdır.
+Uygulamanın kendi menüleri ve özel formları için aynı dili kullanmak istenirse uygulama tarafında `ViewGridLocalization.T("Key")` veya kendi resource sistemi kullanılmalıdır.

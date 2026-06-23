@@ -1,11 +1,11 @@
-# Gridly v41 - Media Playback State Suite
+# ViewGrid v41 - Media Playback State Suite
 
 Audix ve video arşivleri için medya kartlarına gerçek playback state desteği eklendi.
 
 ## Eklenenler
 
-- `GridlyMediaPlaybackState`: `None`, `Loading`, `Playing`, `Paused`, `Error`
-- `GridlyMediaKind`: `Audio`, `Video`, `Image`, `Document`
+- `ViewGridMediaPlaybackState`: `None`, `Loading`, `Playing`, `Paused`, `Error`
+- `ViewGridMediaKind`: `Audio`, `Video`, `Image`, `Document`
 - `ShowMediaPlaybackState`
 - `ShowMediaNowPlayingBadge`
 - `ShowMediaEqualizerIndicator`
@@ -17,32 +17,32 @@ Audix ve video arşivleri için medya kartlarına gerçek playback state desteğ
 ## Audix örnek kullanım
 
 ```csharp
-gridly.ShowMediaOverlayButton = true;
-gridly.ShowMediaPlaybackState = true;
-gridly.ShowMediaNowPlayingBadge = true;
-gridly.ShowMediaEqualizerIndicator = true;
-gridly.MediaKindGetter = row => GridlyMediaKind.Audio;
-gridly.MediaPlaybackStateGetter = row =>
+viewgrid.ShowMediaOverlayButton = true;
+viewgrid.ShowMediaPlaybackState = true;
+viewgrid.ShowMediaNowPlayingBadge = true;
+viewgrid.ShowMediaEqualizerIndicator = true;
+viewgrid.MediaKindGetter = row => ViewGridMediaKind.Audio;
+viewgrid.MediaPlaybackStateGetter = row =>
 {
     var track = row as TrackItem;
-    if (track == null) return GridlyMediaPlaybackState.None;
-    if (track.IsLoading) return GridlyMediaPlaybackState.Loading;
-    if (track.IsPlaying) return GridlyMediaPlaybackState.Playing;
-    if (track.IsPaused) return GridlyMediaPlaybackState.Paused;
-    return GridlyMediaPlaybackState.None;
+    if (track == null) return ViewGridMediaPlaybackState.None;
+    if (track.IsLoading) return ViewGridMediaPlaybackState.Loading;
+    if (track.IsPlaying) return ViewGridMediaPlaybackState.Playing;
+    if (track.IsPaused) return ViewGridMediaPlaybackState.Paused;
+    return ViewGridMediaPlaybackState.None;
 };
 
-gridly.MediaPlayPauseClicked += (s, e) =>
+viewgrid.MediaPlayPauseClicked += (s, e) =>
 {
     var track = e.RowObject as TrackItem;
     if (track == null) return;
 
-    if (e.CurrentState == GridlyMediaPlaybackState.Playing)
+    if (e.CurrentState == ViewGridMediaPlaybackState.Playing)
         Pause(track);
     else
         Play(track);
 
-    gridly.RefreshMediaPlayback();
+    viewgrid.RefreshMediaPlayback();
 };
 ```
 
@@ -51,8 +51,8 @@ gridly.MediaPlayPauseClicked += (s, e) =>
 Video dosyalarında aynı overlay sistemi çalışır. `MediaKindGetter` video döndürürse host uygulama `MediaPlayPauseClicked` içinde ister gömülü preview paneli, ister harici player açabilir.
 
 ```csharp
-gridly.MediaVideoPreviewMode = true;
-gridly.MediaKindGetter = row => ((MediaItem)row).IsVideo ? GridlyMediaKind.Video : GridlyMediaKind.Audio;
+viewgrid.MediaVideoPreviewMode = true;
+viewgrid.MediaKindGetter = row => ((MediaItem)row).IsVideo ? ViewGridMediaKind.Video : ViewGridMediaKind.Audio;
 ```
 
-Gridly player motoru olmaya çalışmaz; doğru davranış, playback UI state ve tıklama olayını sağlamaktır. Gerçek oynatma Audix/video player tarafında yapılır.
+ViewGrid player motoru olmaya çalışmaz; doğru davranış, playback UI state ve tıklama olayını sağlamaktır. Gerçek oynatma Audix/video player tarafında yapılır.

@@ -1,12 +1,12 @@
-# Gridly v28.4 - Filter Popup State & Default Popup Experience
+# ViewGrid v28.4 - Filter Popup State & Default Popup Experience
 
 Bu sürüm filtre kullanımını Excel benzeri daha hızlı ve tutarlı hale getirir.
 
 ## Varsayılan filtre davranışı
 
 - Header filtre butonuna tıklandığında artık varsayılan olarak popup filtre açılır.
-- Ayrı pencere istenirse `FilterMenuMode = GridlyFilterMenuMode.ModalWindow` seçilebilir.
-- İki seçenek birlikte sunulmak istenirse `FilterMenuMode = GridlyFilterMenuMode.Both` kullanılabilir.
+- Ayrı pencere istenirse `FilterMenuMode = ViewGridFilterMenuMode.ModalWindow` seçilebilir.
+- İki seçenek birlikte sunulmak istenirse `FilterMenuMode = ViewGridFilterMenuMode.Both` kullanılabilir.
 
 ## Tümünü seç senkronizasyonu
 

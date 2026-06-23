@@ -1,4 +1,4 @@
-﻿# Gridly v31 - Media + Smart Experience Suite
+# ViewGrid v31 - Media + Smart Experience Suite
 
 Bu sürüm v31 fazlarını tek pakette toplar.
 
@@ -8,15 +8,15 @@ Bu sürüm v31 fazlarını tek pakette toplar.
 - Hover/selected durumda play/action overlay düğmesi.
 - Audix gibi büyük arşivlerde ImageGetter + disk cache + lazy-load kullanımına uygun property altyapısı.
 
-Yeni property grubu: `Gridly - Media Experience`
+Yeni property grubu: `ViewGrid - Media Experience`
 
 ```csharp
-gridly.MediaPlaceholderImage = placeholder;
-gridly.ShowMediaOverlayButton = true;
-gridly.MediaOverlayButtonText = "▶";
-gridly.ShowMediaQualityBadge = true;
-gridly.MediaQualityBadgeAspectName = "Quality";
-gridly.MediaQualityBadgeGetter = row => ((TrackItem)row).Quality;
+viewgrid.MediaPlaceholderImage = placeholder;
+viewgrid.ShowMediaOverlayButton = true;
+viewgrid.MediaOverlayButtonText = "▶";
+viewgrid.ShowMediaQualityBadge = true;
+viewgrid.MediaQualityBadgeAspectName = "Quality";
+viewgrid.MediaQualityBadgeGetter = row => ((TrackItem)row).Quality;
 ```
 
 ## Faz 32 - Smart Views
@@ -44,22 +44,22 @@ gridly.MediaQualityBadgeGetter = row => ((TrackItem)row).Quality;
 ## Audix hızlı kullanım
 
 ```csharp
-gridly.Columns.Add(new GridlyColumn("Kapak", nameof(TrackItem.CoverPath), 96)
+viewgrid.Columns.Add(new ViewGridColumn("Kapak", nameof(TrackItem.CoverPath), 96)
 {
-    Kind = GridlyColumnKind.Image,
+    Kind = ViewGridColumnKind.Image,
     ImageGetter = row => albumCoverCache.GetOrLoad(((TrackItem)row).CoverPath)
 });
-gridly.Columns.Add(new GridlyColumn("Şarkı", nameof(TrackItem.Title), 220) { FillFreeSpace = true });
-gridly.Columns.Add(new GridlyColumn("Sanatçı", nameof(TrackItem.Artist), 160));
-gridly.Columns.Add(new GridlyColumn("Albüm", nameof(TrackItem.Album), 180));
-gridly.Columns.Add(new GridlyColumn("Kalite", nameof(TrackItem.Quality), 80) { Kind = GridlyColumnKind.Badge });
+viewgrid.Columns.Add(new ViewGridColumn("Şarkı", nameof(TrackItem.Title), 220) { FillFreeSpace = true });
+viewgrid.Columns.Add(new ViewGridColumn("Sanatçı", nameof(TrackItem.Artist), 160));
+viewgrid.Columns.Add(new ViewGridColumn("Albüm", nameof(TrackItem.Album), 180));
+viewgrid.Columns.Add(new ViewGridColumn("Kalite", nameof(TrackItem.Quality), 80) { Kind = ViewGridColumnKind.Badge });
 
-gridly.TilePosterMode = true;
-gridly.MediaImageScaleMode = GridlyMediaImageScaleMode.Cover;
-gridly.MediaImageRoundedCorners = true;
-gridly.MediaPlaceholderImage = CreateDefaultAlbumCover();
-gridly.ShowMediaOverlayButton = true;
-gridly.MediaOverlayButtonText = "▶";
-gridly.MediaQualityBadgeAspectName = nameof(TrackItem.Quality);
-gridly.SetViewMode(GridlyViewMode.Poster);
+viewgrid.TilePosterMode = true;
+viewgrid.MediaImageScaleMode = ViewGridMediaImageScaleMode.Cover;
+viewgrid.MediaImageRoundedCorners = true;
+viewgrid.MediaPlaceholderImage = CreateDefaultAlbumCover();
+viewgrid.ShowMediaOverlayButton = true;
+viewgrid.MediaOverlayButtonText = "▶";
+viewgrid.MediaQualityBadgeAspectName = nameof(TrackItem.Quality);
+viewgrid.SetViewMode(ViewGridMode.Poster);
 ```

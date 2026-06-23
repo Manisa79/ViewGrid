@@ -1,6 +1,6 @@
 # Code of Conduct
 
-Gridly welcomes constructive technical feedback.
+ViewGrid welcomes constructive technical feedback.
 
 Participants are expected to:
 

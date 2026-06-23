@@ -1,4 +1,4 @@
-# Gridly 1.0.51.8 Community Preview
+# ViewGrid 1.0.51.8 Community Preview
 
 ## Documentation Capture Scenario Matrix
 

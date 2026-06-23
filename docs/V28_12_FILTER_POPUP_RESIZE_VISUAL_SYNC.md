@@ -1,4 +1,4 @@
-# Gridly v28.12 - Filter Popup Resize + Visual Sync
+# ViewGrid v28.12 - Filter Popup Resize + Visual Sync
 
 Bu sürüm filtre ikonundan açılan floating popup ile menüden açılan filtre popup/pencere görünümünü aynı görsel çizgiye yaklaştırır.
 

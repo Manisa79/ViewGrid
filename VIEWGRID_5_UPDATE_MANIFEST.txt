@@ -1,0 +1,25 @@
+ViewGrid v50.1 Example Center + Theme + Audix Polish
+
+Güncellenecek modüller / uygulamalar:
+- src/ViewGrid: ViewGrid WinForms kontrol çekirdeği
+- samples/ViewGrid.TestApp: Example Center Pro güncellendi
+- docs: V50.1 dokümanı eklendi
+- tools: API guard mevcut şekilde çalıştırıldı
+
+Önemli not:
+- Bu pakette hedef yeni büyük görünüm eklemek değil; mevcut v5 mimarisinin bulunabilirlik, tema ve Audix kullanım deneyimini toparlamaktır.
+- dotnet bu ortamda bulunmadığı için build çalıştırılamadı.
+
+[v50.2]
+Updated apps/modules:
+- src/ViewGrid/Core/ViewGridControl.V502Hardening.cs
+- samples/ViewGrid.TestApp/ViewGridV502HardeningSampleForm.cs
+- samples/ViewGrid.TestApp/Program.cs
+- samples/ViewGrid.TestApp/ExampleCenterProForm.cs
+- docs/V50_2_BUILD_RUNTIME_HARDENING.md
+
+v51.1 Product / Developer Menu Separation
+- samples/ViewGrid.TestApp/Program.cs
+- docs/V51_1_PRODUCT_DEVELOPER_MENU_SEPARATION.md
+- README.md
+- CHANGELOG.md

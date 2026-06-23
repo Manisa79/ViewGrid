@@ -1,6 +1,6 @@
-# Gridly v30.0.1 - Size Compatibility Fix
+# ViewGrid v30.0.1 - Size Compatibility Fix
 
-Bu sürümde `GridlyDialogChrome.ConfigureStandardDialog` için geriye uyumlu overload'lar eklendi.
+Bu sürümde `ViewGridDialogChrome.ConfigureStandardDialog` için geriye uyumlu overload'lar eklendi.
 
 Düzeltilen hata:
 
@@ -15,6 +15,6 @@ Sebep:
 Eklenen uyumluluk overload'ları:
 
 ```csharp
-ConfigureStandardDialog(Form form, GridlyTheme theme, int minimumSize, bool sizeable = true, GridlyDialogIconKind iconKind = GridlyDialogIconKind.Grid)
-ConfigureStandardDialog(Form form, GridlyTheme theme, int minimumWidth, int minimumHeight, bool sizeable = true, GridlyDialogIconKind iconKind = GridlyDialogIconKind.Grid)
+ConfigureStandardDialog(Form form, ViewGridTheme theme, int minimumSize, bool sizeable = true, ViewGridDialogIconKind iconKind = ViewGridDialogIconKind.Grid)
+ConfigureStandardDialog(Form form, ViewGridTheme theme, int minimumWidth, int minimumHeight, bool sizeable = true, ViewGridDialogIconKind iconKind = ViewGridDialogIconKind.Grid)
 ```

@@ -1,12 +1,12 @@
-# Gridly v29.6 - Media Library Views
+# ViewGrid v29.6 - Media Library Views
 
-Bu güncelleme Gridly kart/poster altyapısını medya listeleri için güçlendirir.
+Bu güncelleme ViewGrid kart/poster altyapısını medya listeleri için güçlendirir.
 
 ## Eklenenler
 
-- `GridlyViewMode.MediaTile`: Albüm kapağı, film afişi, öğrenci/makine fotoğrafı gibi kompakt medya kutuları.
-- `GridlyViewMode.FilmStrip`: Büyük görsel + sağ tarafta metin alanı olan yatay medya şeridi.
-- `GridlyMediaImageScaleMode`: `Contain`, `Cover`, `Stretch` görsel yerleşim seçenekleri.
+- `ViewGridMode.MediaTile`: Albüm kapağı, film afişi, öğrenci/makine fotoğrafı gibi kompakt medya kutuları.
+- `ViewGridMode.FilmStrip`: Büyük görsel + sağ tarafta metin alanı olan yatay medya şeridi.
+- `ViewGridMediaImageScaleMode`: `Contain`, `Cover`, `Stretch` görsel yerleşim seçenekleri.
 - `MediaImageScaleMode` ve `MediaImageRoundedCorners` propertyleri.
 - Poster çiziminde yuvarlatılmış görsel kırpma ve sınır çizgisi.
 - Example Center içine `Media Library / Albüm-Film-Fotoğraf` örneği.
@@ -14,17 +14,17 @@ Bu güncelleme Gridly kart/poster altyapısını medya listeleri için güçlend
 ## Kullanım
 
 ```csharp
-gridly.Columns.Add(new GridlyColumn("Kapak", nameof(Row.Cover))
+viewgrid.Columns.Add(new ViewGridColumn("Kapak", nameof(Row.Cover))
 {
-    Kind = GridlyColumnKind.Image,
+    Kind = ViewGridColumnKind.Image,
     ImageGetter = row => ((Row)row).CoverImage
 });
 
-gridly.MediaImageScaleMode = GridlyMediaImageScaleMode.Cover;
-gridly.SetViewMode(GridlyViewMode.Poster);
+viewgrid.MediaImageScaleMode = ViewGridMediaImageScaleMode.Cover;
+viewgrid.SetViewMode(ViewGridMode.Poster);
 // veya
-gridly.SetViewMode(GridlyViewMode.MediaTile);
-gridly.SetViewMode(GridlyViewMode.FilmStrip);
+viewgrid.SetViewMode(ViewGridMode.MediaTile);
+viewgrid.SetViewMode(ViewGridMode.FilmStrip);
 ```
 
 ## Örnek senaryolar

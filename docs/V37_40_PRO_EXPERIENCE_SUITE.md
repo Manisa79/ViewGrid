@@ -1,4 +1,4 @@
-# Gridly v37-v40 Pro Experience Suite
+# ViewGrid v37-v40 Pro Experience Suite
 
 Bu paket v36 Build/Theme/Media Pro üzerine dört yeni fazı tek akışta toplar.
 
@@ -36,7 +36,7 @@ Bu paket v36 Build/Theme/Media Pro üzerine dört yeni fazı tek akışta toplar
 
 Yeni örnek:
 
-- `GridlyV37ToV40ProExperienceSampleForm`
+- `ViewGridV37ToV40ProExperienceSampleForm`
 
 SampleHub üstünde **Hızlı Erişim / Nerede Bulurum?** bölümüne eklendi.
 Example Center Pro içine de `30 v37-v40 Pro Experience` senaryosu eklendi.
@@ -46,17 +46,17 @@ Example Center Pro içine de `30 v37-v40 Pro Experience` senaryosu eklendi.
 Audix albüm ekranında:
 
 ```csharp
-gridly.ApplyV38PerformanceProfile(GridlyV38PerformancePreset.MediaLibrary);
-gridly.ApplyV39InteractionProfile(GridlyV39InteractionPreset.AudixMedia);
-gridly.SetViewMode(GridlyViewMode.Poster);
+viewgrid.ApplyV38PerformanceProfile(ViewGridV38PerformancePreset.MediaLibrary);
+viewgrid.ApplyV39InteractionProfile(ViewGridV39InteractionPreset.AudixMedia);
+viewgrid.SetViewMode(ViewGridMode.Poster);
 ```
 
 Büyük albüm arşivlerinde:
 
 ```csharp
-using (gridly.BeginPerformanceBatch())
+using (viewgrid.BeginPerformanceBatch())
 {
-    gridly.SetObjects(albumRows);
-    gridly.SetViewMode(GridlyViewMode.Gallery);
+    viewgrid.SetObjects(albumRows);
+    viewgrid.SetViewMode(ViewGridMode.Gallery);
 }
 ```

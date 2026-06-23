@@ -28,7 +28,7 @@ Thumbs.db
 
 # Local settings
 settings/*.json
-samples/Gridly.TestApp/settings/*.json
+samples/ViewGrid.TestApp/settings/*.json
 
 .agents/
 *.vsidx

@@ -3,35 +3,35 @@
 Recommended public release name:
 
 ```text
-Gridly 1.0.52.2 Community Preview
+ViewGrid 1.0.52.2 Community Preview
 Tag: v1.0.52.2-preview
 ```
 
 ## 1. Final local checks
 
 ```bash
-dotnet restore Gridly.sln
-dotnet build Gridly.sln -c Release
+dotnet restore ViewGrid.sln
+dotnet build ViewGrid.sln -c Release
 ```
 
 Optional package check:
 
 ```bash
-dotnet pack src/Gridly/Gridly.csproj -c Release
+dotnet pack src/ViewGrid/ViewGrid.csproj -c Release
 ```
 
 ## 2. Create repository
 
-Create a new GitHub repository named `Gridly`.
+Create a new GitHub repository named `ViewGrid`.
 
 ## 3. Push source
 
 ```bash
 git init
 git add .
-git commit -m "Initial Gridly community preview"
+git commit -m "Initial ViewGrid community preview"
 git branch -M main
-git remote add origin https://github.com/<owner>/Gridly.git
+git remote add origin https://github.com/<owner>/ViewGrid.git
 git push -u origin main
 ```
 
@@ -41,7 +41,7 @@ Use:
 
 ```text
 Tag: v1.0.52.2-preview
-Title: Gridly 1.0.52.2 Community Preview
+Title: ViewGrid 1.0.52.2 Community Preview
 ```
 
 Release notes are prepared in:
@@ -71,6 +71,6 @@ Do not commit:
 ## 7. Recommended release command
 
 ```powershell
-./build/Build-Gridly.ps1 -Configuration Release -Pack
+./build/Build-ViewGrid.ps1 -Configuration Release -Pack
 ./release/Make-ReleaseZip.ps1 -Version 1.0.52.2 -Configuration Release -SkipBuild
 ```

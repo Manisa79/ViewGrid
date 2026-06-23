@@ -1,4 +1,4 @@
-# Gridly v28.9 - Card Checkbox Layout Polish
+# ViewGrid v28.9 - Card Checkbox Layout Polish
 
 Card/Tile/Dashboard/Kanban görünümlerinde checkbox artık kart görsel eklentileriyle çakışmadan çizilebilir.
 
@@ -15,7 +15,7 @@ Card/Tile/Dashboard/Kanban görünümlerinde checkbox artık kart görsel eklent
 
 ```csharp
 grid.TileCheckBoxes = true;
-grid.TileCheckBoxPosition = GridlyTileCheckBoxPosition.TopLeft;
+grid.TileCheckBoxPosition = ViewGridTileCheckBoxPosition.TopLeft;
 grid.TileCheckBoxReserveTextArea = true;
 grid.TileCheckBoxDrawOnTop = true;
 grid.TileCheckBoxShowBackground = true;
@@ -25,7 +25,7 @@ grid.TileCheckBoxHitPadding = 6;
 Kartta çok badge/ikon varsa ve sade görünüm istenirse:
 
 ```csharp
-grid.TileCheckBoxVisibilityMode = GridlyTileCheckBoxVisibilityMode.CheckedOrHoverOrSelected;
+grid.TileCheckBoxVisibilityMode = ViewGridTileCheckBoxVisibilityMode.CheckedOrHoverOrSelected;
 ```
 
 Bu modda checkbox işaretli kartlarda kalıcı görünür; diğer kartlarda hover veya selection sırasında görünür.

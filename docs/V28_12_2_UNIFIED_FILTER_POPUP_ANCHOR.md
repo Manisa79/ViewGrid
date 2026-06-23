@@ -1,4 +1,4 @@
-# Gridly v28.12.2 - Unified Filter Popup Anchor & Visual Sync
+# ViewGrid v28.12.2 - Unified Filter Popup Anchor & Visual Sync
 
 Bu sürüm filtre popup davranışını toparlar.
 

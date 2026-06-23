@@ -1,14 +1,14 @@
-# Gridly User Guides
+# ViewGrid User Guides
 
-This repository includes the Gridly 1.0.52.2 Community Preview user/developer guide in both Turkish and English.
+This repository includes the ViewGrid 1.0.52.2 Community Preview user/developer guide in both Turkish and English.
 
 ## Primary documents
 
-- `Gridly_Professional_Developer_User_Guide_v1.0.52.2_TR.docx` — Turkish guide
-- `Gridly_Professional_Developer_User_Guide_v1.0.52.2_EN.docx` — English guide
+- `ViewGrid_Professional_Developer_User_Guide_v1.0.52.2_TR.docx` — Turkish guide
+- `ViewGrid_Professional_Developer_User_Guide_v1.0.52.2_EN.docx` — English guide
 
 ## Screenshot placement audit
 
-- `Gridly_Full_Image_Audit_v1.0.52.2.md`
+- `ViewGrid_Full_Image_Audit_v1.0.52.2.md`
 
 The guides use inline screenshots. Screenshots were reviewed against the section headings and only verified placements were kept. Sections without a reliable screenshot include an explicit note rather than a misleading image.
