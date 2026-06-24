@@ -1,6 +1,6 @@
-# ViewGrid v27.5 - Menu & Icon Customization
+# Taylan.Pano v27.5 - Menu & Icon Customization
 
-Bu sürüm ViewGrid menülerini host projeye göre tamamen yönetilebilir hale getirir.
+Bu sürüm Pano menülerini host projeye göre tamamen yönetilebilir hale getirir.
 
 ## Eklenenler
 
@@ -20,10 +20,10 @@ Bu sürüm ViewGrid menülerini host projeye göre tamamen yönetilebilir hale g
 ## Örnek
 
 ```csharp
-grid.MenuOptions.HeaderGroups = ViewGridMenuGroups.Filter | ViewGridMenuGroups.Sort | ViewGridMenuGroups.ColumnChooser;
-grid.MenuOptions.BodyGroups = ViewGridMenuGroups.Clipboard | ViewGridMenuGroups.ViewMode;
-grid.SetMenuItemVisible(ViewGridMenuItemKeys.AdvancedFilter, false);
-grid.SetCustomMenuIconFolder(@"C:\MyApp\ViewGridIcons");
+grid.MenuOptions.HeaderGroups = PanoMenuGroups.Filter | PanoMenuGroups.Sort | PanoMenuGroups.ColumnChooser;
+grid.MenuOptions.BodyGroups = PanoMenuGroups.Clipboard | PanoMenuGroups.ViewMode;
+grid.SetMenuItemVisible(PanoMenuItemKeys.AdvancedFilter, false);
+grid.SetCustomMenuIconFolder(@"C:\MyApp\PanoIcons");
 ```
 
 ## İkon key isimleri

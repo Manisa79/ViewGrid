@@ -1,6 +1,6 @@
-# ViewGrid v30.0 Visual Experience Suite
+# Taylan.Pano v30.0 Visual Experience Suite
 
-Bu sürüm ViewGrid'yi klasik tablo kontrolü çizgisinden çıkarıp medya, katalog, dashboard ve üretim ekranları için çok amaçlı görsel veri deneyimi kontrolüne taşır.
+Bu sürüm Pano'yi klasik tablo kontrolü çizgisinden çıkarıp medya, katalog, dashboard ve üretim ekranları için çok amaçlı görsel veri deneyimi kontrolüne taşır.
 
 ## Yeni / güçlendirilen görünüm tipleri
 
@@ -26,18 +26,18 @@ Bu sürüm ViewGrid'yi klasik tablo kontrolü çizgisinden çıkarıp medya, kat
 ## Kullanım örnekleri
 
 ```csharp
-viewgrid.Columns.Add(new ViewGridColumn("Kapak", "Cover", 120)
+pano.Columns.Add(new PanoColumn("Kapak", "Cover", 120)
 {
-    Kind = ViewGridColumnKind.Image,
+    Kind = PanoColumnKind.Image,
     ImageGetter = row => ((MediaRow)row).CoverImage
 });
 
-viewgrid.Columns.Add(new ViewGridColumn("Başlık", "Title", 220) { Editable = true });
-viewgrid.Columns.Add(new ViewGridColumn("Açıklama", "Description", 260));
+pano.Columns.Add(new PanoColumn("Başlık", "Title", 220) { Editable = true });
+pano.Columns.Add(new PanoColumn("Açıklama", "Description", 260));
 
-viewgrid.TilePosterMode = true;
-viewgrid.MediaImageScaleMode = ViewGridMediaImageScaleMode.Cover;
-viewgrid.SetViewMode(ViewGridMode.Gallery);
+pano.TilePosterMode = true;
+pano.MediaImageScaleMode = PanoMediaImageScaleMode.Cover;
+pano.SetViewMode(PanoViewMode.Gallery);
 ```
 
 ## Önerilen proje eşleşmeleri

@@ -1,6 +1,6 @@
 # Security Policy
 
-ViewGrid is currently published as a Community Preview.
+Pano is currently published as a Community Preview.
 
 ## Supported version
 
@@ -14,7 +14,7 @@ Please do not open a public issue for exploitable vulnerabilities. Send a privat
 
 Include:
 
-- affected ViewGrid version,
+- affected Pano version,
 - minimal reproduction steps,
 - expected impact,
 - affected platform and .NET SDK version.

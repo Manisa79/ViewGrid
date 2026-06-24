@@ -1,4 +1,4 @@
-# ViewGrid v1.0.51.4 - TestApp Language Form Polish
+# Taylan.Pano v1.0.51.4 - TestApp Language Form Polish
 
 ## Amaç
 
@@ -12,8 +12,8 @@ GitHub öncesi TestApp dil seçimi penceresi daha düzgün, designer dostu ve te
 - Checkbox görünmeme/kırpılma problemi düzeltildi.
 - Dil penceresi yüksekliği artırıldı ve buton alanı sabitlendi.
 - TestApp açıldıktan sonra sol menüden **Dil Değiştir** seçeneği ile dil tekrar değiştirilebilir.
-- Yeni açılan ViewGrid örnekleri ve built-in menüler seçilen dili kullanır.
+- Yeni açılan Pano örnekleri ve built-in menüler seçilen dili kullanır.
 
 ## Not
 
-Dil seçimi `settings/viewgrid-testapp-language.json` içinde saklanır.
+Dil seçimi `settings/pano-testapp-language.json` içinde saklanır.

@@ -1,10 +1,10 @@
-# ViewGrid v28.1 Poster Mode
+# Taylan.Pano v28.1 Poster Mode
 
-Bu sürümde `ViewGridMode.Poster` eklendi. Amaç `ExtraLargeIcons` gibi teknik isim yerine büyük görsel kart senaryoları için akılda kalıcı ve designer dostu bir görünüm adı sağlamaktır.
+Bu sürümde `PanoViewMode.Poster` eklendi. Amaç `ExtraLargeIcons` gibi teknik isim yerine büyük görsel kart senaryoları için akılda kalıcı ve designer dostu bir görünüm adı sağlamaktır.
 
 ## Eklenenler
 
-- `ViewGridMode.Poster`
+- `PanoViewMode.Poster`
 - `PosterModeAutoLayout`
 - `PosterPreferredWidth`
 - `PosterPreferredHeight`
@@ -14,10 +14,10 @@ Bu sürümde `ViewGridMode.Poster` eklendi. Amaç `ExtraLargeIcons` gibi teknik 
 
 ## Davranış
 
-Poster modu mevcut tile/poster çizim altyapısını kullanır. Bu nedenle eski kodlar bozulmadan kalır; yeni projelerde ise `ViewGridMode.Poster` kullanımı daha okunaklıdır.
+Poster modu mevcut tile/poster çizim altyapısını kullanır. Bu nedenle eski kodlar bozulmadan kalır; yeni projelerde ise `PanoViewMode.Poster` kullanımı daha okunaklıdır.
 
 ```csharp
-grid.SetViewMode(ViewGridMode.Poster);
+grid.SetViewMode(PanoViewMode.Poster);
 grid.PosterPreferredWidth = 220;
 grid.PosterPreferredHeight = 300;
 grid.PosterImageHeight = 176;

@@ -1,11 +1,11 @@
 name: Bug report
-description: Report a ViewGrid bug
+description: Report a Pano bug
 labels: [bug]
 body:
   - type: input
     id: version
     attributes:
-      label: ViewGrid version
+      label: Pano version
       placeholder: 1.0.52.2
   - type: dropdown
     id: viewmode

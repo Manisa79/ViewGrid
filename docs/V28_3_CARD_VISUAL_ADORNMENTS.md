@@ -1,49 +1,49 @@
-# ViewGrid v28.3 - Card Visual Adornments
+# Taylan.Pano v28.3 - Card Visual Adornments
 
 Bu sürümde Card/Tile/Dashboard/Kanban/Timeline görünümleri için genel amaçlı görsel eklenti altyapısı eklendi.
-Amaç AOI Support Desk gibi tek bir projeye özel durum noktası çizmek değil; stok, üretim, sipariş, dosya listesi, mesaj/ticket ekranı gibi tüm kart senaryolarında aynı ViewGrid renderer altyapısını kullanabilmek.
+Amaç AOI Support Desk gibi tek bir projeye özel durum noktası çizmek değil; stok, üretim, sipariş, dosya listesi, mesaj/ticket ekranı gibi tüm kart senaryolarında aynı Pano renderer altyapısını kullanabilmek.
 
 ## Yeni API
 
 - `CardVisualAdornments`: Kart görsel eklentilerini aç/kapat.
-- `CardVisualInfoGetter`: Satır bazlı `ViewGridCardVisualInfo` döndürür.
+- `CardVisualInfoGetter`: Satır bazlı `PanoCardVisualInfo` döndürür.
 - `CardDefaultAccentMode`: Varsayılan accent çizimi. `Auto`, `TopBar`, `LeftBar`, `BottomBar`, `Outline`, `Glow`, `None`.
-- `CardAutoBadgesFromBadgeColumns`: `ViewGridColumnKind.Badge` kolonlarını kart üzerinde otomatik rozet olarak gösterir.
+- `CardAutoBadgesFromBadgeColumns`: `PanoColumnKind.Badge` kolonlarını kart üzerinde otomatik rozet olarak gösterir.
 - `CardBadgeSize`: Kart rozet boyutu.
 - `CardBadgeMaxCount`: Kart üzerinde çizilecek maksimum rozet sayısı.
 
 ## Örnek
 
 ```csharp
-viewgrid.CardVisualInfoGetter = row =>
+pano.CardVisualInfoGetter = row =>
 {
     TicketRow ticket = (TicketRow)row;
 
-    ViewGridCardVisualInfo info = new ViewGridCardVisualInfo
+    PanoCardVisualInfo info = new PanoCardVisualInfo
     {
         AccentColor = ticket.StatusColor,
         DotColor = ticket.StatusColor,
-        AccentMode = ViewGridCardAccentMode.TopBar
+        AccentMode = PanoCardAccentMode.TopBar
     };
 
     if (ticket.UnreadMessageCount > 0)
     {
-        info.Badges.Add(new ViewGridCardBadge
+        info.Badges.Add(new PanoCardBadge
         {
             Text = ticket.UnreadMessageCount.ToString(),
-            Glyph = ViewGridCardGlyph.Message,
+            Glyph = PanoCardGlyph.Message,
             BackColor = Color.Orange,
-            Placement = ViewGridCardBadgePlacement.TopRight
+            Placement = PanoCardBadgePlacement.TopRight
         });
     }
 
     if (ticket.IsCritical)
     {
-        info.Badges.Add(new ViewGridCardBadge
+        info.Badges.Add(new PanoCardBadge
         {
-            Glyph = ViewGridCardGlyph.Warning,
+            Glyph = PanoCardGlyph.Warning,
             BackColor = Color.Firebrick,
-            Placement = ViewGridCardBadgePlacement.TopLeft
+            Placement = PanoCardBadgePlacement.TopLeft
         });
     }
 

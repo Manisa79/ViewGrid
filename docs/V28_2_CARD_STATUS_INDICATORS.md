@@ -1,4 +1,4 @@
-# ViewGrid v28.2 - Card Status Indicators
+# Taylan.Pano v28.2 - Card Status Indicators
 
 Card/Tile/Dashboard/Kanban/Poster çizim yolu artık Details hücre renderer'ına bağımlı kalmadan durum rengini kendi içinde çizebilir.
 

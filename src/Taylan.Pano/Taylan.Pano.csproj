@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <AssemblyName>Taylan.Pano</AssemblyName>
+    <RootNamespace>Taylan.Pano</RootNamespace>
+    <Version>1.0.52.2</Version>
+    <AssemblyVersion>1.0.52.2</AssemblyVersion>
+    <FileVersion>1.0.52.2</FileVersion>
+    <InformationalVersion>1.0.52.2-community-preview-media-scenarios-compile-cleanup</InformationalVersion>
+    <Company>Güner Taylan</Company>
+    <Product>Taylan.Pano</Product>
+    <Description>T.Pano: prepared by Güner Taylan. Modern FastPanoControl WinForms virtual list/grid control for .NET 10 with themed rendering, column filtering, glyph/icon cells, cell editing and large-data virtualization.</Description>
+    <!-- Designer delegate provider properties are runtime-only. Attributes + ShouldSerialize methods prevent serialization; NoWarn avoids stale WinForms analyzer false positives in some VS previews. -->
+    <NoWarn>$(NoWarn);WFO1000</NoWarn>
+    <PackageId>Pano.WinForms</PackageId>
+    <Authors>Güner Taylan</Authors>
+    <PackageTags>winforms;listview;grid;pano;virtualization;filtering;glyph;net10</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl Condition="'$(PanoRepositoryUrl)' != ''">$(PanoRepositoryUrl)</RepositoryUrl>
+    <PackageProjectUrl Condition="'$(PanoRepositoryUrl)' != ''">$(PanoRepositoryUrl)</PackageProjectUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- .NET 10 / VS 2022 out-of-process WinForms Designer için SmartTag/ActionList desteği.
+         System.Windows.Forms.Design eski .NET Framework designer API'sidir; net10'da Microsoft.WinForms.Designer.SDK gerekir. -->
+    <PackageReference Include="Microsoft.WinForms.Designer.SDK" Version="1.6.0" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Core\PanoControl.bmp" />
+    <EmbeddedResource Include="Tree\TreePanoControl.bmp" />
+  </ItemGroup>
+</Project>

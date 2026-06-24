@@ -1,6 +1,6 @@
 # Support
 
-ViewGrid 1.0.52.2 is a Community Preview for WinForms developers.
+Pano 1.0.52.2 is a Community Preview for WinForms developers.
 
 Use GitHub Issues for:
 
@@ -10,4 +10,4 @@ Use GitHub Issues for:
 - feature requests,
 - documentation corrections.
 
-Please include the ViewGrid version, Windows version, .NET SDK version, view mode, theme mode and a small reproduction sample when possible.
+Please include the Pano version, Windows version, .NET SDK version, view mode, theme mode and a small reproduction sample when possible.

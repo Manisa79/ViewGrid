@@ -1,4 +1,4 @@
-# ViewGrid v30.0.3 - Visual Experience Suite Example Center Binding
+# Taylan.Pano v30.0.3 - Visual Experience Suite Example Center Binding
 
 Bu güncellemede v30 görsel modları sadece çekirdekte kalmayacak şekilde örnek merkezine bağlandı.
 

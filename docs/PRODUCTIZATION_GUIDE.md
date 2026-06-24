@@ -1,4 +1,4 @@
-# ViewGrid Productization Guide
+# Taylan.Pano Productization Guide
 
 ## Release hedefleri
 

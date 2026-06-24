@@ -1,10 +1,10 @@
-# ViewGrid v29.5 - FixedFree Column Resize Behavior
+# Taylan.Pano v29.5 - FixedFree Column Resize Behavior
 
 ## Amaç
 
 Details görünümünde sağ tarafta kullanılabilir boş alan varken bir kolon elle genişletildiğinde yatay scrollbar'ın erken açılması engellendi.
 
-ViewGrid artık ObjectListView'in `FixedFree` hissine daha yakın davranır:
+Pano artık ObjectListView'in `FixedFree` hissine daha yakın davranır:
 
 - Kullanıcı bir kolonu genişlettiğinde önce `FillFreeSpace` kolonlarından boşluk alınır.
 - Görünür alan tamamen dolana kadar yatay scrollbar açılmaz.
@@ -20,7 +20,7 @@ public bool AbsorbColumnResizeOverflowFromFreeSpace { get; set; } = true;
 Designer kategorisi:
 
 ```text
-ViewGrid - Column Manager
+Pano - Column Manager
 ```
 
 ## Kullanım

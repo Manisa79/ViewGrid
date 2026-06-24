@@ -1,34 +1,34 @@
-# ViewGrid v29 Profile System
+# Taylan.Pano v29 Profile System
 
 v29 ile profil sistemi tek modele indirildi:
 
-- `ViewGridColumnProfile` kaldırıldı.
-- Tek kaynak: `ViewGridLayoutProfile`.
-- Dosya uzantısı: `.viewgridprofile`.
+- `PanoColumnProfile` kaldırıldı.
+- Tek kaynak: `PanoLayoutProfile`.
+- Dosya uzantısı: `.panoprofile`.
 - `ProfileVersion = 29`.
 - Kullanıcı / makine / rol kapsamı desteklenir.
-- Eski `.json` kolon layout profilleri `ViewGridProfileMigrator` ile otomatik dönüştürülebilir.
+- Eski `.json` kolon layout profilleri `PanoProfileMigrator` ile otomatik dönüştürülebilir.
 
 ## Kullanım
 
 ```csharp
 grid.SaveLayoutProfile("Technician", roleName: "Technician");
 grid.LoadLayoutProfile("Technician", roleName: "Technician");
-grid.ExportLayoutProfile(@"C:\Temp\Technician.viewgridprofile", "Technician");
-grid.ImportLayoutProfile(@"C:\Temp\Technician.viewgridprofile", apply: true);
+grid.ExportLayoutProfile(@"C:\Temp\Technician.panoprofile", "Technician");
+grid.ImportLayoutProfile(@"C:\Temp\Technician.panoprofile", apply: true);
 int migrated = grid.MigrateLegacyProfiles();
 ```
 
 ## Geriye uyumluluk
 
 `SaveProfile`, `LoadProfile`, `ResetProfile` artık v29 layout profile API'sine yönlenir.
-`ViewGridColumnProfile` sınıfı bilinçli olarak kaldırıldı; yeni kod `ViewGridLayoutProfile` kullanmalıdır.
+`PanoColumnProfile` sınıfı bilinçli olarak kaldırıldı; yeni kod `PanoLayoutProfile` kullanmalıdır.
 
 ## Build fix
 
-Ultimate paketindeki iki ayrı `ViewGridCellChange` modeli ayrıldı:
+Ultimate paketindeki iki ayrı `PanoCellChange` modeli ayrıldı:
 
-- Undo sistemi: `ViewGrid.Undo.ViewGridCellChange`
-- Change tracking: `ViewGridTrackedCellChange`
+- Undo sistemi: `Taylan.Pano.Undo.PanoCellChange`
+- Change tracking: `PanoTrackedCellChange`
 
 Bu sayede `RowObject` / `Column` compile hatası giderildi.

@@ -1,4 +1,4 @@
-# ViewGrid v28.8 - Cell Overflow Scroll & Reader UX
+# Taylan.Pano v28.8 - Cell Overflow Scroll & Reader UX
 
 Bu sürüm uzun açıklama/not/log kolonları için satır yüksekliğini büyütmeden hücre içinde okunabilirlik sağlayan genel altyapıyı ekler.
 
@@ -16,7 +16,7 @@ Bu sürüm uzun açıklama/not/log kolonları için satır yüksekliğini büyü
 ## Kullanım
 
 ```csharp
-var noteColumn = new ViewGridColumn("Teknisyen Notu", "TechnicianNote", 260)
+var noteColumn = new PanoColumn("Teknisyen Notu", "TechnicianNote", 260)
 {
     WordWrap = true,
     AllowCellScroll = true,
@@ -33,12 +33,12 @@ grid.EnableCellOverflowDetailsPopup = true;
 
 ## Tasarım zamanı özellikleri
 
-ViewGridControl:
+PanoControl:
 - EnableCellOverflowScroll
 - ShowCellOverflowScrollBars
 - EnableCellOverflowDetailsPopup
 
-ViewGridColumn:
+PanoColumn:
 - AllowCellScroll
 - ShowCellScrollBar
 - CellScrollMaxVisibleLines

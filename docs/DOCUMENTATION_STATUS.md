@@ -19,7 +19,7 @@ The TestApp now contains a dedicated `Missing Documentation` capture category fo
 
 Recommended completion flow:
 
-1. Run `samples/ViewGrid.TestApp`.
+1. Run `samples/Taylan.Pano.TestApp`.
 2. Open `Documentation Capture Mode`.
 3. Click `Eksik DOCX Görselleri`.
 4. Generate PNG files into `docs/screenshots`.

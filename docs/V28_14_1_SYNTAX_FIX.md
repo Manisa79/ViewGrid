@@ -1,4 +1,4 @@
-# ViewGrid v28.14.1 - Syntax Fix
+# Taylan.Pano v28.14.1 - Syntax Fix
 
 Bu sürüm v28.14 platform/filtre altyapısında kalan C# sözdizimi hatasını düzeltir.
 

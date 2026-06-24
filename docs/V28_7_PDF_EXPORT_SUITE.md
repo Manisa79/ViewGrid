@@ -1,6 +1,6 @@
-# ViewGrid v28.7 - PDF Export Suite
+# Taylan.Pano v28.7 - PDF Export Suite
 
-Bu sürüm ViewGrid export altyapısına gerçek PDF çıktısı ekler.
+Bu sürüm Pano export altyapısına gerçek PDF çıktısı ekler.
 
 ## Eklenenler
 
@@ -20,11 +20,11 @@ Bu sürüm ViewGrid export altyapısına gerçek PDF çıktısı ekler.
 ## Kullanım
 
 ```csharp
-grid.ExportVisiblePdf(@"C:\Temp\tickets.pdf", new ViewGridPdfExportOptions
+grid.ExportVisiblePdf(@"C:\Temp\tickets.pdf", new PanoPdfExportOptions
 {
     Title = "AOI Support Desk Tickets",
-    Mode = ViewGridPdfExportMode.Table,
-    Orientation = ViewGridPdfPageOrientation.Landscape,
+    Mode = PanoPdfExportMode.Table,
+    Orientation = PanoPdfPageOrientation.Landscape,
     FitToPageWidth = true,
     ShowGridLines = true,
     ZebraRows = true
@@ -34,17 +34,17 @@ grid.ExportVisiblePdf(@"C:\Temp\tickets.pdf", new ViewGridPdfExportOptions
 Card/Dashboard çıktısı:
 
 ```csharp
-grid.ExportVisiblePdf(@"C:\Temp\dashboard.pdf", new ViewGridPdfExportOptions
+grid.ExportVisiblePdf(@"C:\Temp\dashboard.pdf", new PanoPdfExportOptions
 {
     Title = "Dashboard",
-    Mode = ViewGridPdfExportMode.Card,
+    Mode = PanoPdfExportMode.Card,
     CardColumns = 2,
     CardMinHeight = 105,
-    CardVisualInfoResolver = row => new ViewGridCardVisualInfo
+    CardVisualInfoResolver = row => new PanoCardVisualInfo
     {
         AccentColor = Color.DodgerBlue,
         DotColor = Color.DodgerBlue,
-        Badges = { new ViewGridCardBadge { Text = "SAP", BackColor = Color.SeaGreen } }
+        Badges = { new PanoCardBadge { Text = "SAP", BackColor = Color.SeaGreen } }
     }
 });
 ```

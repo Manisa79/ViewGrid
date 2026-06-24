@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Taylan.Pano.TestApp</AssemblyName>
+    <Version>1.0.52.2</Version>
+    <AssemblyVersion>1.0.52.2</AssemblyVersion>
+    <FileVersion>1.0.52.2</FileVersion>
+    <InformationalVersion>1.0.52.2-community-preview-media-scenarios-compile-cleanup</InformationalVersion>
+    <Product>Pano Test App</Product>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Taylan.Pano\Taylan.Pano.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Legacy snippet files are intentionally kept inside TestApp for GitHub reference,
+         but they are not compiled because many are copy/paste recipes with repeated demo model names. -->
+    <Compile Remove="Snippets\FeatureSamples\**\*.cs" />
+  </ItemGroup>
+</Project>

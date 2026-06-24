@@ -1,12 +1,12 @@
-# ViewGrid 1.0.51.5 Community Preview
+# Taylan.Pano 1.0.51.5 Community Preview
 
-This release prepares ViewGrid for public GitHub preview.
+This release prepares Pano for public GitHub preview.
 
 ## Highlights
 
 - Core DLL and sample/TestApp separation
 - TestApp startup language selector with Designer.cs controls
-- Built-in localization entry point through `ViewGridLocalization.Use(...)`
+- Built-in localization entry point through `PanoLocalization.Use(...)`
 - Product/Developer menu separation
 - Audix-oriented media views: Poster, Gallery, MediaTile and FilmStrip
 - Media playback state preparation for audio/video cards
@@ -15,8 +15,8 @@ This release prepares ViewGrid for public GitHub preview.
 
 ## Repository layout
 
-- `src/ViewGrid` — clean ViewGrid core library
-- `samples/ViewGrid.TestApp` — showcase, developer samples and language selector
+- `src/Taylan.Pano` — clean Pano core library
+- `samples/Taylan.Pano.TestApp` — showcase, developer samples and language selector
 - `docs` — API notes, migration notes and feature history
 - `.github` — workflow and contribution templates
 

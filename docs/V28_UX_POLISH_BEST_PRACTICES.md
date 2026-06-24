@@ -1,4 +1,4 @@
-# ViewGrid v28 UX Polish + Best Practice Pack
+# Taylan.Pano v28 UX Polish + Best Practice Pack
 
 Bu sürümde kart/poster/dashboard görünümlerinde global filtre butonu kart alanından üst hızlı filtre barına taşındı. Böylece filtre aksiyonu veri kartı aksiyonu gibi görünmez.
 
@@ -19,4 +19,4 @@ Filtre global bir grid davranışıdır; kart üstünde ya da kart sağında dur
 
 ## İlham alınan popüler grid davranışları
 
-DevExpress tarafında filter/search panel ve kolon filtre dropdownları; Telerik tarafında hızlı grouping/filtering/virtualized grid davranışı; Syncfusion tarafında drag-drop, context menu, export/summary gibi enterprise grid beklentileri incelendi. ViewGrid tarafında bunlar hafif ve WinForms designer dostu property'ler olarak toparlandı.
+DevExpress tarafında filter/search panel ve kolon filtre dropdownları; Telerik tarafında hızlı grouping/filtering/virtualized grid davranışı; Syncfusion tarafında drag-drop, context menu, export/summary gibi enterprise grid beklentileri incelendi. Pano tarafında bunlar hafif ve WinForms designer dostu property'ler olarak toparlandı.

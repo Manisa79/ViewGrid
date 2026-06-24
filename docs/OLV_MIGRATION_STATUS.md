@@ -1,6 +1,6 @@
-# ViewGrid ObjectListView Migration Status - v1.0.26.88
+# Taylan.Pano ObjectListView Migration Status - v1.0.26.88
 
-Bu sürümde ViewGrid, BrightIdeasSoftware/ObjectListView bağımlılığı olmadan eski OLV/GLV kullanım kalıplarını karşılamaya odaklanır.
+Bu sürümde Pano, BrightIdeasSoftware/ObjectListView bağımlılığı olmadan eski OLV/GLV kullanım kalıplarını karşılamaya odaklanır.
 
 ## Bu sürümde eklenenler
 
@@ -27,5 +27,5 @@ Bu sürümde ViewGrid, BrightIdeasSoftware/ObjectListView bağımlılığı olma
 ## Bilerek eklenmeyenler
 
 - Doğrudan BrightIdeasSoftware tiplerine compile-time bağımlılık yok.
-- OLV renderer sınıfları birebir taşınmadı; ViewGrid kendi theme-aware paint motorunu kullanır.
-- Eski OLV grouping renderer/hot item renderer sınıfları yerine ViewGrid theme/format event sistemi kullanılmalı.
+- OLV renderer sınıfları birebir taşınmadı; Pano kendi theme-aware paint motorunu kullanır.
+- Eski OLV grouping renderer/hot item renderer sınıfları yerine Pano theme/format event sistemi kullanılmalı.

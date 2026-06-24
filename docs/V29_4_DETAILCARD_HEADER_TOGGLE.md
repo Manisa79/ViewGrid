@@ -1,12 +1,12 @@
 # V29.4 DetailCard Header Toggle
 
-ViewGrid v29.4 ile `DetailCard` görünümünde kolon başlıklarının gösterilip gizlenebilmesi için yeni bir ayar eklendi.
+Pano v29.4 ile `DetailCard` görünümünde kolon başlıklarının gösterilip gizlenebilmesi için yeni bir ayar eklendi.
 
 ## Yeni özellik
 
 ```csharp
-viewgrid.ShowDetailCardColumnHeaders = true;  // Varsayılan: Başlık + değer
-viewgrid.ShowDetailCardColumnHeaders = false; // Sadece değerler
+pano.ShowDetailCardColumnHeaders = true;  // Varsayılan: Başlık + değer
+pano.ShowDetailCardColumnHeaders = false; // Sadece değerler
 ```
 
 ## Ne işe yarar?
@@ -29,7 +29,7 @@ Online
 
 ## Tasarım zamanı
 
-Özellik `ViewGrid - DetailCard` kategorisinde tasarım zamanında da görünür. Böylece kullanıcı kod yazmadan DetailCard başlıklarını açıp kapatabilir.
+Özellik `Pano - DetailCard` kategorisinde tasarım zamanında da görünür. Böylece kullanıcı kod yazmadan DetailCard başlıklarını açıp kapatabilir.
 
 ## Örnek merkezi
 

@@ -1,4 +1,4 @@
-# ViewGrid v27.3 Rendering & UX Engine
+# Taylan.Pano v27.3 Rendering & UX Engine
 
 Bu sürümde v27.2 kullanıcıya açılan state/preset altyapısının üzerine görsel hücre renderer davranışları eklendi.
 

@@ -1,4 +1,4 @@
-# ViewGrid v28.12.3 - Filter Popup Icon/Dispose + Visual Unification Fix
+# Taylan.Pano v28.12.3 - Filter Popup Icon/Dispose + Visual Unification Fix
 
 Bu bakım paketi filtre popup tarafındaki iki önemli problemi düzeltir.
 
@@ -13,4 +13,4 @@ Bu bakım paketi filtre popup tarafındaki iki önemli problemi düzeltir.
 
 ## Not
 
-Popup pencereleri kozmetik icon üretim hatalarında artık ViewGrid kullanımını engellemez.
+Popup pencereleri kozmetik icon üretim hatalarında artık Pano kullanımını engellemez.

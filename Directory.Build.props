@@ -4,7 +4,7 @@
     <Nullable>enable</Nullable>
     <Deterministic>true</Deterministic>
     <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
-    <TreatWarningsAsErrors Condition="'$(VIEWGRID_STRICT)' == 'true'">true</TreatWarningsAsErrors>
+    <TreatWarningsAsErrors Condition="'$(PANO_STRICT)' == 'true'">true</TreatWarningsAsErrors>
     <NoWarn>$(NoWarn);WFO1000</NoWarn>
   </PropertyGroup>
 </Project>

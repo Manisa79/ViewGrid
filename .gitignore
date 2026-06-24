@@ -28,7 +28,7 @@ Thumbs.db
 
 # Local settings
 settings/*.json
-samples/ViewGrid.TestApp/settings/*.json
+samples/Taylan.Pano.TestApp/settings/*.json
 
 .agents/
 *.vsidx

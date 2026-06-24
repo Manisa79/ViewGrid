@@ -1,12 +1,12 @@
 name: Feature request
-description: Suggest an improvement for ViewGrid
+description: Suggest an improvement for Pano
 labels: [enhancement]
 body:
   - type: textarea
     id: problem
     attributes:
       label: Problem / scenario
-      description: What are you trying to build with ViewGrid?
+      description: What are you trying to build with Pano?
     validations:
       required: true
   - type: textarea

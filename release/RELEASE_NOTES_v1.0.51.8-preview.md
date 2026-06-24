@@ -1,4 +1,4 @@
-# ViewGrid 1.0.51.8 Community Preview
+# Taylan.Pano 1.0.51.8 Community Preview
 
 ## Documentation Capture Scenario Matrix
 

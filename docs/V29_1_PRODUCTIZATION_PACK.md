@@ -1,4 +1,4 @@
-# ViewGrid v29.1 Productization Pack
+# Taylan.Pano v29.1 Productization Pack
 
 Eklenenler:
 
@@ -13,4 +13,4 @@ Eklenenler:
 - Quality check scriptleri
 - Ürünleşme release yapısı
 
-Not: Bu paket core ViewGrid API'sini riske atmadan ürünleşme/sağlamlaştırma katmanını ekler.
+Not: Bu paket core Pano API'sini riske atmadan ürünleşme/sağlamlaştırma katmanını ekler.

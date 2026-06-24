@@ -1,6 +1,6 @@
-# ViewGrid v50.2 - Build & Runtime Hardening
+# Taylan.Pano v50.2 - Build & Runtime Hardening
 
-Bu sürüm yeni görsel mod eklemek yerine ViewGrid 5.0 özelliklerini projelerde daha güvenli kullanmaya odaklanır.
+Bu sürüm yeni görsel mod eklemek yerine Pano 5.0 özelliklerini projelerde daha güvenli kullanmaya odaklanır.
 
 ## Ana hedef
 
@@ -12,15 +12,15 @@ Bu sürüm yeni görsel mod eklemek yerine ViewGrid 5.0 özelliklerini projelerd
 ## Yeni API
 
 ```csharp
-viewgrid.ApplyViewGrid502HardeningDefaults();
-var checks = viewgrid.RunViewGrid502RuntimeHardeningChecks();
+pano.ApplyPano502HardeningDefaults();
+var checks = pano.RunPano502RuntimeHardeningChecks();
 ```
 
 Audix için:
 
 ```csharp
-viewgrid.ApplyAudix502MediaDefaults();
-viewgrid.SetViewMode(ViewGridMode.Poster);
+pano.ApplyAudix502MediaDefaults();
+pano.SetViewMode(PanoViewMode.Poster);
 ```
 
 ## Runtime check alanları
@@ -35,9 +35,9 @@ viewgrid.SetViewMode(ViewGridMode.Poster);
 
 Yeni örnek:
 
-- `ViewGridV502HardeningSampleForm`
-- Example Center hızlı erişim: `ViewGrid v50.2 Hardening`
+- `PanoV502HardeningSampleForm`
+- Example Center hızlı erişim: `Pano v50.2 Hardening`
 
 ## Build notu
 
-Bu paket, `tools/viewgrid_api_guard.py` statik kontrol akışını destekler. Gerçek C# derleme için Windows/.NET SDK ortamında `build/build-viewgrid.cmd` veya `build/Build-ViewGrid.ps1` çalıştırılmalıdır.
+Bu paket, `tools/pano_api_guard.py` statik kontrol akışını destekler. Gerçek C# derleme için Windows/.NET SDK ortamında `build/build-pano.cmd` veya `build/Build-Pano.ps1` çalıştırılmalıdır.

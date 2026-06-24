@@ -1,9 +1,9 @@
-# ViewGrid v28.6 - Card Layout Designer + Advanced Excel Filter + Row Height Stability
+# Taylan.Pano v28.6 - Card Layout Designer + Advanced Excel Filter + Row Height Stability
 
 ## Added
 
 - Card Layout Designer foundation for Card/Tile/Dashboard views.
-- `ViewGridCardLayoutDefinition` and `ViewGridCardLayoutField` models.
+- `PanoCardLayoutDefinition` and `PanoCardLayoutField` models.
 - `ShowCardLayoutDesigner()` API for runtime/layout tooling.
 - Column-level card layout properties: `VisibleInCard`, `CardOrder`, `CardRole`, `CardShowCaption`, `CardMaxLines`.
 - Advanced Excel-style filter shortcuts inside the filter popup/window:

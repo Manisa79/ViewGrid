@@ -1,12 +1,12 @@
-# ViewGrid v29.6 - Media Library Views
+# Taylan.Pano v29.6 - Media Library Views
 
-Bu güncelleme ViewGrid kart/poster altyapısını medya listeleri için güçlendirir.
+Bu güncelleme Pano kart/poster altyapısını medya listeleri için güçlendirir.
 
 ## Eklenenler
 
-- `ViewGridMode.MediaTile`: Albüm kapağı, film afişi, öğrenci/makine fotoğrafı gibi kompakt medya kutuları.
-- `ViewGridMode.FilmStrip`: Büyük görsel + sağ tarafta metin alanı olan yatay medya şeridi.
-- `ViewGridMediaImageScaleMode`: `Contain`, `Cover`, `Stretch` görsel yerleşim seçenekleri.
+- `PanoViewMode.MediaTile`: Albüm kapağı, film afişi, öğrenci/makine fotoğrafı gibi kompakt medya kutuları.
+- `PanoViewMode.FilmStrip`: Büyük görsel + sağ tarafta metin alanı olan yatay medya şeridi.
+- `PanoMediaImageScaleMode`: `Contain`, `Cover`, `Stretch` görsel yerleşim seçenekleri.
 - `MediaImageScaleMode` ve `MediaImageRoundedCorners` propertyleri.
 - Poster çiziminde yuvarlatılmış görsel kırpma ve sınır çizgisi.
 - Example Center içine `Media Library / Albüm-Film-Fotoğraf` örneği.
@@ -14,17 +14,17 @@ Bu güncelleme ViewGrid kart/poster altyapısını medya listeleri için güçle
 ## Kullanım
 
 ```csharp
-viewgrid.Columns.Add(new ViewGridColumn("Kapak", nameof(Row.Cover))
+pano.Columns.Add(new PanoColumn("Kapak", nameof(Row.Cover))
 {
-    Kind = ViewGridColumnKind.Image,
+    Kind = PanoColumnKind.Image,
     ImageGetter = row => ((Row)row).CoverImage
 });
 
-viewgrid.MediaImageScaleMode = ViewGridMediaImageScaleMode.Cover;
-viewgrid.SetViewMode(ViewGridMode.Poster);
+pano.MediaImageScaleMode = PanoMediaImageScaleMode.Cover;
+pano.SetViewMode(PanoViewMode.Poster);
 // veya
-viewgrid.SetViewMode(ViewGridMode.MediaTile);
-viewgrid.SetViewMode(ViewGridMode.FilmStrip);
+pano.SetViewMode(PanoViewMode.MediaTile);
+pano.SetViewMode(PanoViewMode.FilmStrip);
 ```
 
 ## Örnek senaryolar

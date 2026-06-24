@@ -1,11 +1,11 @@
-# ViewGrid v41 - Media Playback State Suite
+# Taylan.Pano v41 - Media Playback State Suite
 
 Audix ve video arşivleri için medya kartlarına gerçek playback state desteği eklendi.
 
 ## Eklenenler
 
-- `ViewGridMediaPlaybackState`: `None`, `Loading`, `Playing`, `Paused`, `Error`
-- `ViewGridMediaKind`: `Audio`, `Video`, `Image`, `Document`
+- `PanoMediaPlaybackState`: `None`, `Loading`, `Playing`, `Paused`, `Error`
+- `PanoMediaKind`: `Audio`, `Video`, `Image`, `Document`
 - `ShowMediaPlaybackState`
 - `ShowMediaNowPlayingBadge`
 - `ShowMediaEqualizerIndicator`
@@ -17,32 +17,32 @@ Audix ve video arşivleri için medya kartlarına gerçek playback state desteğ
 ## Audix örnek kullanım
 
 ```csharp
-viewgrid.ShowMediaOverlayButton = true;
-viewgrid.ShowMediaPlaybackState = true;
-viewgrid.ShowMediaNowPlayingBadge = true;
-viewgrid.ShowMediaEqualizerIndicator = true;
-viewgrid.MediaKindGetter = row => ViewGridMediaKind.Audio;
-viewgrid.MediaPlaybackStateGetter = row =>
+pano.ShowMediaOverlayButton = true;
+pano.ShowMediaPlaybackState = true;
+pano.ShowMediaNowPlayingBadge = true;
+pano.ShowMediaEqualizerIndicator = true;
+pano.MediaKindGetter = row => PanoMediaKind.Audio;
+pano.MediaPlaybackStateGetter = row =>
 {
     var track = row as TrackItem;
-    if (track == null) return ViewGridMediaPlaybackState.None;
-    if (track.IsLoading) return ViewGridMediaPlaybackState.Loading;
-    if (track.IsPlaying) return ViewGridMediaPlaybackState.Playing;
-    if (track.IsPaused) return ViewGridMediaPlaybackState.Paused;
-    return ViewGridMediaPlaybackState.None;
+    if (track == null) return PanoMediaPlaybackState.None;
+    if (track.IsLoading) return PanoMediaPlaybackState.Loading;
+    if (track.IsPlaying) return PanoMediaPlaybackState.Playing;
+    if (track.IsPaused) return PanoMediaPlaybackState.Paused;
+    return PanoMediaPlaybackState.None;
 };
 
-viewgrid.MediaPlayPauseClicked += (s, e) =>
+pano.MediaPlayPauseClicked += (s, e) =>
 {
     var track = e.RowObject as TrackItem;
     if (track == null) return;
 
-    if (e.CurrentState == ViewGridMediaPlaybackState.Playing)
+    if (e.CurrentState == PanoMediaPlaybackState.Playing)
         Pause(track);
     else
         Play(track);
 
-    viewgrid.RefreshMediaPlayback();
+    pano.RefreshMediaPlayback();
 };
 ```
 
@@ -51,8 +51,8 @@ viewgrid.MediaPlayPauseClicked += (s, e) =>
 Video dosyalarında aynı overlay sistemi çalışır. `MediaKindGetter` video döndürürse host uygulama `MediaPlayPauseClicked` içinde ister gömülü preview paneli, ister harici player açabilir.
 
 ```csharp
-viewgrid.MediaVideoPreviewMode = true;
-viewgrid.MediaKindGetter = row => ((MediaItem)row).IsVideo ? ViewGridMediaKind.Video : ViewGridMediaKind.Audio;
+pano.MediaVideoPreviewMode = true;
+pano.MediaKindGetter = row => ((MediaItem)row).IsVideo ? PanoMediaKind.Video : PanoMediaKind.Audio;
 ```
 
-ViewGrid player motoru olmaya çalışmaz; doğru davranış, playback UI state ve tıklama olayını sağlamaktır. Gerçek oynatma Audix/video player tarafında yapılır.
+Pano player motoru olmaya çalışmaz; doğru davranış, playback UI state ve tıklama olayını sağlamaktır. Gerçek oynatma Audix/video player tarafında yapılır.

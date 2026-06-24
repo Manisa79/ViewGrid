@@ -1,6 +1,6 @@
-# ViewGrid v1.0.52.2 - Missing Screenshot Capture Pack
+# Taylan.Pano v1.0.52.2 - Missing Screenshot Capture Pack
 
-Bu paket, `ViewGrid_Professional_Developer_User_Guide_v1.0.52.2` dokümanında `70. Görsel Durumu ve Eksik Takip` altında kalan bağımsız görselleri üretmek için TestApp içindeki Documentation Capture Mode'u genişletir.
+Bu paket, `Pano_Professional_Developer_User_Guide_v1.0.52.2` dokümanında `70. Görsel Durumu ve Eksik Takip` altında kalan bağımsız görselleri üretmek için TestApp içindeki Documentation Capture Mode'u genişletir.
 
 ## TestApp değişiklikleri
 
@@ -8,11 +8,11 @@ Bu paket, `ViewGrid_Professional_Developer_User_Guide_v1.0.52.2` dokümanında `
 - `DocumentationCaptureForm` içine `Missing Documentation` kategorisi altında 31 yeni capture item eklendi.
 - `Eksik DOCX Görselleri` butonu eklendi; yalnızca eksik görsel senaryolarını seçer.
 - Eksik görsellerin çıktı adı dokümandaki beklenen adla eşleşir; örnek: `kolon-sistemi.png`.
-- `viewgrid-docx-insert-map.json` artık `TargetHeading` alanı üretir.
+- `pano-docx-insert-map.json` artık `TargetHeading` alanı üretir.
 
 ## Üretim adımları
 
-1. `samples/ViewGrid.TestApp` projesini çalıştır.
+1. `samples/Taylan.Pano.TestApp` projesini çalıştır.
 2. `Documentation / Documentation Capture Mode` ekranını aç.
 3. Çıktı klasörünü `docs/screenshots` olarak seç.
 4. `Eksik DOCX Görselleri` butonuna bas.
@@ -21,9 +21,9 @@ Bu paket, `ViewGrid_Professional_Developer_User_Guide_v1.0.52.2` dokümanında `
 
 ```bash
 python tools/docs/insert_screenshots_into_docx.py \
-  --docx docs/ViewGrid_Professional_Developer_User_Guide_v1.0.52.2_WithInlineScreenshots.docx \
+  --docx docs/Pano_Professional_Developer_User_Guide_v1.0.52.2_WithInlineScreenshots.docx \
   --screenshots docs/screenshots \
-  --output docs/ViewGrid_Professional_Developer_User_Guide_v1.0.52.2_Completed.docx
+  --output docs/Pano_Professional_Developer_User_Guide_v1.0.52.2_Completed.docx
 ```
 
 ## Eksik görsel senaryo listesi
@@ -64,4 +64,4 @@ python tools/docs/insert_screenshots_into_docx.py \
 
 ## Notlar
 
-Bu formlar gerçek ürün API'lerini ve aynı ViewGrid kontrolünü kullanır; ancak bazı soyut altyapı başlıkları için amaç, görsel dokümantasyon ve yayın kontrolü sağlayan temsilî ekran üretmektir. Örneğin Event Bus, Action Pipeline ve Plugin System başlıklarında akış ve durum matrisi görseli üretilir.
+Bu formlar gerçek ürün API'lerini ve aynı Pano kontrolünü kullanır; ancak bazı soyut altyapı başlıkları için amaç, görsel dokümantasyon ve yayın kontrolü sağlayan temsilî ekran üretmektir. Örneğin Event Bus, Action Pipeline ve Plugin System başlıklarında akış ve durum matrisi görseli üretilir.

@@ -1,4 +1,4 @@
-# ViewGrid v31 - Media + Smart Experience Suite
+# Taylan.Pano v31 - Media + Smart Experience Suite
 
 Bu sürüm v31 fazlarını tek pakette toplar.
 
@@ -8,15 +8,15 @@ Bu sürüm v31 fazlarını tek pakette toplar.
 - Hover/selected durumda play/action overlay düğmesi.
 - Audix gibi büyük arşivlerde ImageGetter + disk cache + lazy-load kullanımına uygun property altyapısı.
 
-Yeni property grubu: `ViewGrid - Media Experience`
+Yeni property grubu: `Pano - Media Experience`
 
 ```csharp
-viewgrid.MediaPlaceholderImage = placeholder;
-viewgrid.ShowMediaOverlayButton = true;
-viewgrid.MediaOverlayButtonText = "▶";
-viewgrid.ShowMediaQualityBadge = true;
-viewgrid.MediaQualityBadgeAspectName = "Quality";
-viewgrid.MediaQualityBadgeGetter = row => ((TrackItem)row).Quality;
+pano.MediaPlaceholderImage = placeholder;
+pano.ShowMediaOverlayButton = true;
+pano.MediaOverlayButtonText = "▶";
+pano.ShowMediaQualityBadge = true;
+pano.MediaQualityBadgeAspectName = "Quality";
+pano.MediaQualityBadgeGetter = row => ((TrackItem)row).Quality;
 ```
 
 ## Faz 32 - Smart Views
@@ -44,22 +44,22 @@ viewgrid.MediaQualityBadgeGetter = row => ((TrackItem)row).Quality;
 ## Audix hızlı kullanım
 
 ```csharp
-viewgrid.Columns.Add(new ViewGridColumn("Kapak", nameof(TrackItem.CoverPath), 96)
+pano.Columns.Add(new PanoColumn("Kapak", nameof(TrackItem.CoverPath), 96)
 {
-    Kind = ViewGridColumnKind.Image,
+    Kind = PanoColumnKind.Image,
     ImageGetter = row => albumCoverCache.GetOrLoad(((TrackItem)row).CoverPath)
 });
-viewgrid.Columns.Add(new ViewGridColumn("Şarkı", nameof(TrackItem.Title), 220) { FillFreeSpace = true });
-viewgrid.Columns.Add(new ViewGridColumn("Sanatçı", nameof(TrackItem.Artist), 160));
-viewgrid.Columns.Add(new ViewGridColumn("Albüm", nameof(TrackItem.Album), 180));
-viewgrid.Columns.Add(new ViewGridColumn("Kalite", nameof(TrackItem.Quality), 80) { Kind = ViewGridColumnKind.Badge });
+pano.Columns.Add(new PanoColumn("Şarkı", nameof(TrackItem.Title), 220) { FillFreeSpace = true });
+pano.Columns.Add(new PanoColumn("Sanatçı", nameof(TrackItem.Artist), 160));
+pano.Columns.Add(new PanoColumn("Albüm", nameof(TrackItem.Album), 180));
+pano.Columns.Add(new PanoColumn("Kalite", nameof(TrackItem.Quality), 80) { Kind = PanoColumnKind.Badge });
 
-viewgrid.TilePosterMode = true;
-viewgrid.MediaImageScaleMode = ViewGridMediaImageScaleMode.Cover;
-viewgrid.MediaImageRoundedCorners = true;
-viewgrid.MediaPlaceholderImage = CreateDefaultAlbumCover();
-viewgrid.ShowMediaOverlayButton = true;
-viewgrid.MediaOverlayButtonText = "▶";
-viewgrid.MediaQualityBadgeAspectName = nameof(TrackItem.Quality);
-viewgrid.SetViewMode(ViewGridMode.Poster);
+pano.TilePosterMode = true;
+pano.MediaImageScaleMode = PanoMediaImageScaleMode.Cover;
+pano.MediaImageRoundedCorners = true;
+pano.MediaPlaceholderImage = CreateDefaultAlbumCover();
+pano.ShowMediaOverlayButton = true;
+pano.MediaOverlayButtonText = "▶";
+pano.MediaQualityBadgeAspectName = nameof(TrackItem.Quality);
+pano.SetViewMode(PanoViewMode.Poster);
 ```

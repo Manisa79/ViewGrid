@@ -1,7 +1,7 @@
-# ViewGrid Release Checklist
+# Taylan.Pano Release Checklist
 
 - [ ] `bin` ve `obj` klasörleri temizlendi.
-- [ ] `build/Build-ViewGrid.ps1 -Configuration Release -Pack` başarılı.
+- [ ] `build/Build-Pano.ps1 -Configuration Release -Pack` başarılı.
 - [ ] TestApp açıldı.
 - [ ] Details satır yüksekliği seçimden sonra değişmiyor.
 - [ ] Poster -> Card/Dashboard geçişinde yükseklik cache'i kalmıyor.
@@ -13,8 +13,8 @@
 - [ ] Release zip oluşturuldu.
 
 - [ ] `.git`, `.vs`, `bin`, `obj`, `artifacts`, `*.user`, `*.dll`, `*.exe`, `*.pdb` dosyaları public source zip içinde yok.
-- [ ] README, changelog, issue templates, `ViewGridVersionInfo` ve `.csproj` sürümü `1.0.52.2` ile tutarlı.
-- [ ] NuGet publish gerekiyorsa `/p:ViewGridRepositoryUrl=https://github.com/<owner>/ViewGrid` değeri verildi.
+- [ ] README, changelog, issue templates, `PanoVersionInfo` ve `.csproj` sürümü `1.0.52.2` ile tutarlı.
+- [ ] NuGet publish gerekiyorsa `/p:PanoRepositoryUrl=https://github.com/<owner>/Pano` değeri verildi.
 
 
 ## Documentation screenshot completion

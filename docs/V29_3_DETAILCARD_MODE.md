@@ -1,6 +1,6 @@
 # V29.3 DetailCard Mode
 
-ViewGrid v29.3 ile `ViewGridMode.DetailCard` eklendi.
+Pano v29.3 ile `PanoViewMode.DetailCard` eklendi.
 
 ## Amaç
 
@@ -17,13 +17,13 @@ Bu görünüm özellikle şu ekranlar için uygundur:
 ## Kullanım
 
 ```csharp
-glvPanel.SetViewMode(ViewGridMode.DetailCard);
+glvPanel.SetViewMode(PanoViewMode.DetailCard);
 ```
 
 veya:
 
 ```csharp
-glvPanel.ViewMode = ViewGridMode.DetailCard;
+glvPanel.ViewMode = PanoViewMode.DetailCard;
 ```
 
 ## Davranış

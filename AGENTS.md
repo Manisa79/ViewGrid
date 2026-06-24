@@ -2,17 +2,17 @@
 
 ## Project overview
 
-ViewGrid is a Windows Forms data presentation control for .NET Windows desktop applications. The core package lives in `src/ViewGrid`; demo, showcase and developer-facing screens live in `samples/ViewGrid.TestApp`.
+T.T.Pano is a Windows Forms data presentation control for .NET Windows desktop applications. The core package lives in `src/Taylan.Pano`; demo, showcase and developer-facing screens live in `samples/Taylan.Pano.TestApp`.
 
 Current source package version: `1.0.52.2`.
 
 ## Repository rules
 
-- Keep the core DLL clean. Do not add sample forms, demo datasets, Example Center code or TestApp startup flows under `src/ViewGrid`.
-- Put all demos, experiments, screenshots and user-facing example workflows under `samples/ViewGrid.TestApp` or `docs`.
+- Keep the core DLL clean. Do not add sample forms, demo datasets, Example Center code or TestApp startup flows under `src/Taylan.Pano`.
+- Put all demos, experiments, screenshots and user-facing example workflows under `samples/Taylan.Pano.TestApp` or `docs`.
 - Follow the Designer First standard for persistent WinForms UI: controls belong in `.Designer.cs`; behavior, data loading and event logic belong in the form `.cs`.
 - Do not commit generated build outputs: `.vs`, `bin`, `obj`, `artifacts`, `TestResults`, `*.dll`, `*.exe`, `*.pdb`, `*.nupkg`, `*.snupkg`, `*.csproj.user`.
-- Keep version metadata aligned across `src/ViewGrid/ViewGrid.csproj`, `samples/ViewGrid.TestApp/ViewGrid.TestApp.csproj`, `src/ViewGrid/Core/ViewGridVersionInfo.cs`, `README.md`, `CHANGELOG.md`, release notes and issue templates.
+- Keep version metadata aligned across `src/Taylan.Pano/Taylan.Pano.csproj`, `samples/Taylan.Pano.TestApp/Taylan.Pano.TestApp.csproj`, `src/Taylan.Pano/Core/PanoVersionInfo.cs`, `README.md`, `CHANGELOG.md`, release notes and issue templates.
 - Preserve Turkish and English user-facing text intentionally. New visible strings should be localizable when they appear in reusable UI.
 
 ## Build and validation commands
@@ -20,10 +20,10 @@ Current source package version: `1.0.52.2`.
 Run these on Windows with the .NET SDK that supports `net10.0-windows` and WinForms:
 
 ```powershell
-dotnet restore ViewGrid.sln
-dotnet build ViewGrid.sln -c Release
-./tools/QualityChecks/ViewGrid.QualityChecks.ps1
-dotnet pack src/ViewGrid/ViewGrid.csproj -c Release -o artifacts/nuget /p:ViewGridRepositoryUrl=https://github.com/<owner>/ViewGrid
+dotnet restore Taylan.Pano.sln
+dotnet build Taylan.Pano.sln -c Release
+./tools/QualityChecks/Taylan.Pano.QualityChecks.ps1
+dotnet pack src/Taylan.Pano/Taylan.Pano.csproj -c Release -o artifacts/nuget /p:PanoRepositoryUrl=https://github.com/<owner>/Pano
 ```
 
 The Linux/headless container may not have the .NET Windows desktop SDK. If `dotnet` is unavailable, perform static checks only and state that a real Windows build still needs to be run.

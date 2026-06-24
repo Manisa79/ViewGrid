@@ -1,6 +1,6 @@
-# ViewGrid API Reference
+# Taylan.Pano API Reference
 
-Bu dosya ViewGrid'nin ana ürün API yüzeyini tek yerde toplar.
+Bu dosya Pano'nin ana ürün API yüzeyini tek yerde toplar.
 
 ## Veri Yükleme
 
@@ -12,21 +12,21 @@ await grid.SetObjectsAsync(async ct => await LoadRowsAsync(ct));
 ## Görünüm Modları
 
 ```csharp
-grid.ViewMode = ViewGridMode.Details;
-grid.ViewMode = ViewGridMode.Card;
-grid.ViewMode = ViewGridMode.Dashboard;
-grid.ViewMode = ViewGridMode.Poster;
+grid.ViewMode = PanoViewMode.Details;
+grid.ViewMode = PanoViewMode.Card;
+grid.ViewMode = PanoViewMode.Dashboard;
+grid.ViewMode = PanoViewMode.Poster;
 ```
 
 ## Profil Sistemi v29
 
-Tek profil modeli `ViewGridLayoutProfile` kabul edilir. Eski `ViewGridColumnProfile` kaldırılmıştır.
+Tek profil modeli `PanoLayoutProfile` kabul edilir. Eski `PanoColumnProfile` kaldırılmıştır.
 
 ```csharp
 grid.Profiles.Save("Technician");
 grid.Profiles.Load("Technician");
-grid.Profiles.Export("Technician.viewgridprofile");
-grid.Profiles.Import("Technician.viewgridprofile");
+grid.Profiles.Export("Technician.panoprofile");
+grid.Profiles.Import("Technician.panoprofile");
 grid.Profiles.MigrateLegacyProfiles();
 ```
 
@@ -47,4 +47,4 @@ grid.Exporting.ExportVisiblePdf(path, options);
 
 ## Ürünleşme Notu
 
-Her release öncesi `build/Build-ViewGrid.ps1 -Configuration Release -Pack` çalıştırılmalıdır.
+Her release öncesi `build/Build-Pano.ps1 -Configuration Release -Pack` çalıştırılmalıdır.

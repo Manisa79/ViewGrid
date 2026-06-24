@@ -1,10 +1,10 @@
-# ViewGrid v34 + v35 + v36 Faz Paketi
+# Taylan.Pano v34 + v35 + v36 Faz Paketi
 
 Bu paket v33 Theme Accessibility Engine üzerine üç fazı birlikte ekler.
 
 ## Faz 34 — Stability & Build Quality
 
-Amaç: ViewGrid çekirdeğinde yeni fazlar büyüdükçe API çakışmalarını, riskli ayarları ve örnek merkezi karmaşasını daha kolay kontrol etmek.
+Amaç: Pano çekirdeğinde yeni fazlar büyüdükçe API çakışmalarını, riskli ayarları ve örnek merkezi karmaşasını daha kolay kontrol etmek.
 
 Eklenenler:
 
@@ -14,8 +14,8 @@ Eklenenler:
 - `ApplyV34BuildQualityPack()`
 - `RunBuildQualityDiagnostics()`
 - `RunBuildQualityDiagnosticsText()`
-- `ViewGridQualityReport`
-- `ViewGridQualityCheckItem`
+- `PanoQualityReport`
+- `PanoQualityCheckItem`
 
 Kontrol ettiği alanlar:
 
@@ -39,8 +39,8 @@ Eklenenler:
 - `ApplyV35ThemeStudioPack(...)`
 - `GetThemeStudioPalettes()`
 - `ExportCurrentThemeStudioPalette(...)`
-- `ViewGridThemeStudio`
-- `ViewGridThemeStudioPreset`
+- `PanoThemeStudio`
+- `PanoThemeStudioPreset`
 
 Hazır presetler:
 
@@ -74,14 +74,14 @@ Eklenenler:
 Audix önerilen kullanım:
 
 ```csharp
-viewgrid.ApplyV36MediaProPack();
-viewgrid.SetViewMode(ViewGridMode.Poster);
-viewgrid.MediaQualityBadgeAspectName = "Format";
-viewgrid.MediaImagePathGetter = row => ((TrackItem)row).CoverPath;
+pano.ApplyV36MediaProPack();
+pano.SetViewMode(PanoViewMode.Poster);
+pano.MediaQualityBadgeAspectName = "Format";
+pano.MediaImagePathGetter = row => ((TrackItem)row).CoverPath;
 
-var coverColumn = new ViewGridColumn("Kapak", "Title");
-coverColumn.ImageGetter = row => viewgrid.ResolveMediaImagePro(row);
-viewgrid.Columns.Add(coverColumn);
+var coverColumn = new PanoColumn("Kapak", "Title");
+coverColumn.ImageGetter = row => pano.ResolveMediaImagePro(row);
+pano.Columns.Add(coverColumn);
 ```
 
 ## Example Center

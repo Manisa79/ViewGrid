@@ -1,6 +1,6 @@
 # Code of Conduct
 
-ViewGrid welcomes constructive technical feedback.
+Taylan.Pano welcomes constructive technical feedback.
 
 Participants are expected to:
 
