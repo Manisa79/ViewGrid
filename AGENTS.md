@@ -1,8 +1,8 @@
-# AGENTS.md
+﻿# AGENTS.md
 
 ## Project overview
 
-T.T.Pano is a Windows Forms data presentation control for .NET Windows desktop applications. The core package lives in `src/Taylan.Pano`; demo, showcase and developer-facing screens live in `samples/Taylan.Pano.TestApp`.
+T.Pano / Taylan.Pano is a Windows Forms data presentation control for .NET Windows desktop applications. The core package lives in `src/Taylan.Pano`; demo, showcase and developer-facing screens live in `samples/Taylan.Pano.TestApp`.
 
 Current source package version: `1.0.52.2`.
 
@@ -23,7 +23,7 @@ Run these on Windows with the .NET SDK that supports `net10.0-windows` and WinFo
 dotnet restore Taylan.Pano.sln
 dotnet build Taylan.Pano.sln -c Release
 ./tools/QualityChecks/Taylan.Pano.QualityChecks.ps1
-dotnet pack src/Taylan.Pano/Taylan.Pano.csproj -c Release -o artifacts/nuget /p:PanoRepositoryUrl=https://github.com/<owner>/Pano
+dotnet pack src/Taylan.Pano/Taylan.Pano.csproj -c Release -o artifacts/nuget /p:PanoRepositoryUrl=https://github.com/<owner>/Taylan.Pano
 ```
 
 The Linux/headless container may not have the .NET Windows desktop SDK. If `dotnet` is unavailable, perform static checks only and state that a real Windows build still needs to be run.
@@ -45,3 +45,4 @@ The Linux/headless container may not have the .NET Windows desktop SDK. If `dotn
 4. Update `RELEASE_NOTES_v1_0_52_2.md` or create the next release notes file.
 5. Create a release tag such as `v1.0.52.2-preview`.
 6. Publish only source-ready files and generated artifacts from `artifacts/`, not local IDE state.
+
